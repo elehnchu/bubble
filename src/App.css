@@ -13,19 +13,60 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Header {
+  background-color: lightskyblue;
+  min-height: 80px;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 40px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: left;
+  float: left;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 80px;
   color: white;
 }
 
+.list-item{
+  height: 100px;
+  width: 300px;
+  float: left;
+  display: flex;
+  align-self: center;
+  background-color: bisque;
+  flex-direction: row;
+  border-radius: 10px;
+  margin: 10px;
+  margin-top: 30px;
+}
+
+.list-item-icons {
+  padding-left: 10px;
+  font-size: 50px;
+  border-radius: 3px;
+  border-color: black;
+  width: 30px;
+  height: 50px;
+}
+
+.list-item-group-name {
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+}
 .App-link {
   color: #61dafb;
+}
+
+.list-item-description {
+  padding-left: 10px;
+}
+
+.Groups {
+  font-size: 10px;
 }
 
 @keyframes App-logo-spin {
