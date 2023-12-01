@@ -1,6 +1,7 @@
 // UserProfile.js
 import React from 'react';
 import './UserProfile.css';
+import DefaultProfile from '../assets/profile-photos/default.png'
 
 const UserProfile = () => {
   return (
@@ -8,7 +9,7 @@ const UserProfile = () => {
     <div className="Header">Profile</div>
     <div className="user-profile">
       <img
-        src="../assets/profile-photos/default.jpg"
+        src={DefaultProfile}
         alt=''
         className="profile-photo"
       />
