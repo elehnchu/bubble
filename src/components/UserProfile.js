@@ -4,10 +4,12 @@ import './UserProfile.css';
 
 const UserProfile = () => {
   return (
+    <>
+    <div className="Header">Profile</div>
     <div className="user-profile">
       <img
         src="../assets/profile-photos/default.jpg"
-        alt="Profile"
+        alt=''
         className="profile-photo"
       />
       <h1 className="user-text">User</h1>
@@ -29,6 +31,7 @@ const UserProfile = () => {
         <p className="about-me-text">Lorem ipsum text</p>
       </div>
     </div>
+    </>
   );
 };
 
