@@ -1,16 +1,18 @@
-//import logo from './logo.svg';
 import './App.css';
-import List from './List.js'
-
+import List from './List.js';
+import UserProfile from './components/UserProfile';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <div className="Header">
-        Bubbles
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<List />} />
+          <Route path="/userprofile" element={<UserProfile />} />
+        </Routes>
       </div>
-      <List/>
-    </div>
+    </Router>
   );
 }
 

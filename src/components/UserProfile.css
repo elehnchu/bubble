@@ -1,0 +1,45 @@
+/* UserProfile.css */
+.user-profile {
+    text-align: center;
+  }
+  
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  
+  .user-text {
+    font-size: 24px;
+  }
+  
+  .email-text {
+    font-size: 16px;
+    color: gray;
+  }
+  
+  .tags {
+    margin-top: 10px;
+  }
+  
+  .tag {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: lightblue;
+    color: darkblue;
+  }
+  
+  .details {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .detail-title {
+    font-weight: bold;
+  }
+  
+  .about-me-text {
+    margin-top: 10px;
+  }
+  

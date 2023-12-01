@@ -2,12 +2,17 @@ import './App.css';
 
 function List(){
     return (
-        <div className = "List">
-            <ListItem  icon="X" groupName="Group 1" description= "Lorem ipsum dolor sit ame"></ListItem>
-            <ListItem  icon="X" groupName="Group 2" description= "Lorem ipsum dolor sit ame"></ListItem>
-            <ListItem  icon="X" groupName="Group 3" description= "Lorem ipsum dolor sit ame"></ListItem>
-            <ListItem  icon="X" groupName="Group 4" description= "Lorem ipsum dolor sit ame"></ListItem>
-        </div>
+        <>
+            <div className="Header">
+            Bubbles
+            </div>
+            <div className = "List">
+                <ListItem  icon="X" groupName="Group 1" description= "Lorem ipsum dolor sit ame"></ListItem>
+                <ListItem  icon="X" groupName="Group 2" description= "Lorem ipsum dolor sit ame"></ListItem>
+                <ListItem  icon="X" groupName="Group 3" description= "Lorem ipsum dolor sit ame"></ListItem>
+                <ListItem  icon="X" groupName="Group 4" description= "Lorem ipsum dolor sit ame"></ListItem>
+            </div>
+        </>
     );
 }
 
