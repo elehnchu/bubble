@@ -1,0 +1,135 @@
+.group-header {
+    background-color: #6DCFD9;
+    min-height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    float: left;
+    font-size: 80px;
+    color: white;
+  }
+  
+  .back-arrow {
+    height: 40px;
+    width: 40px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    padding-bottom: 20%;
+  }
+  
+  .back-button {
+    background-color: transparent;
+    border: none;
+  }
+  
+  .back {
+    display: inline-block;
+  }
+  
+  .Content {
+    text-align: center;
+  }
+  
+  .group-pic {
+    height: 120px;
+    width: 120px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    border-radius: 50%;
+  }
+  
+  .group-name {
+    color: rgb(38, 153, 251);
+    font-size: 35px;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  
+  .group-members {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-width: 100%;
+  }
+  
+  .group-users {
+    max-width: 100px;
+    display: inline-block;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  
+  .profile-pic {
+    height: 45px;
+    border-radius: 50%;
+  }
+  
+  .spacer {
+    font-size: 20px;
+    margin-bottom: 27px;
+    color: rgb(188, 224, 253);
+  }
+  
+  .group-tags {
+    padding-top: 10px;
+  }
+  
+  .tags {
+    background-color: rgb(206, 234, 247);
+    margin: 5px;
+    font-weight: bold;
+    color:#255155;
+    font-size: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  .user-name {
+    color: rgb(38, 153, 251);
+    font-weight: bold;
+    font-size: 10px;
+  }
+  
+  .group-description {
+    background-color: rgb(206, 234, 247);
+    text-align: left;
+    border-radius: 10px;
+    padding: 20px;
+    padding-bottom: 35px;
+    margin-top: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  .description-entry {
+    color: rgb(37, 81, 85);
+    font-weight: bold;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    font-size: 15px;
+    white-space: pre-line;
+    line-height: 22px;
+  }
+  
+  .request-button {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: rgb(9, 127, 140);
+    color: white;
+    border-radius: 10px;
+    margin: 20px;
+    width: 80%;
+    height: 50px;
+    font-weight: bold;
+    border: none;
+  }
+  
+  .request-button:hover {
+    opacity: 1;
+  }
+  

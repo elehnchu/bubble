@@ -1,6 +1,7 @@
-import './App.css';
+import './GroupSearch.css';
+import React from "react";
 
-function List(){
+function GroupSearch(){
     return (
         <div className="Bubble_Header">
             <div className ="Header">
@@ -23,7 +24,7 @@ function List(){
     );
 }
 
-export default List;
+export default GroupSearch;
 
 function ListItem ({icon, groupName, description, memberNum}) {
     return (

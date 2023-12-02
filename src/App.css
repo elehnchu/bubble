@@ -1,6 +1,9 @@
 .App {
   text-align: center;
-
+  color: #255155;
+  background-color: #F0F9FF;
+  height: 100vh;
+  overflow-y: hidden;
 }
 
 .App-logo {
@@ -16,127 +19,23 @@
 
 .Header {
   background-color: #6DCFD9;
-  min-height: 30px;
+  min-height: 10px;
   width: 100%;
-  font-weight: 500;
-  padding-top: 35px;
-  padding-bottom: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: row;
   align-items: left;
   float: left;
   justify-content: center;
-  font-size: 25px;
-  color: white;
-}
-
-.Add-button{
-  background-color: #70CDD7; /* Green */
-  border: none;
-  height: 50px;
-  width: 50px;
-  color: white;
-  text-align: center;
-  float: right;
-  margin-top: 7px;
-  margin-bottom: 5px;
-  margin-right: 18px;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 30px;
-  border-radius: 50%;
-}
-
-
-
-input[type=text] {
-  margin: 10px;
-  padding: 7px;
-  width: 70%;
-}
-
-
-
-.input{
-  padding: 10px;
-  font-size: 25px;
-  float: center;
-  border-color: black;
-  border-radius: 30S%;
-}
-
-.rounded-input {
-  padding:10px;
-  border-radius:10px;
-}
-
-.list-item{
-  height: 185px;
-  width: 150px;
-  float: left;
-  display: center;
-  align-self: center;
-  flex-direction: row;
-  margin: 5px;
-  margin-top: 10px;
-  margin-left: 20px;
-  background-color: bisque;
-}
-
-.list-item-row{
-  align-self: center;
-  flex-direction: row;
-  padding-top: 2px;
-  width: 100%;
-  height: 70px;
-  float: left;
-  display: center;
-}
-
-.list-item-icons {
   font-size: 50px;
-  border-radius: 3px;
-  width: 100%;
-  height: 110px;
-  background-color: rgb(168, 143, 111);
-
+  color: white;
 }
-
-
-.list-item-group-name {
-  font-size: 16px;
-  width: 42%;
-  margin: 5px;
-  height: 100%;
-  font-weight: bold;
-  text-align: center;
-  float: left;
-  color: gray;
-}
-
-.list-item-members{
-  padding-top: 10px;
-  font-size: 12px;
-  font-weight: light;
-
-}
-
 
 .App-link {
   color: #61dafb;
 }
 
-
-.list-item-description {
-  float: right;
-  width: 42%;
-  margin: 5px;
-  height: 80%;
-  padding-top: 15px;
-  text-align: center;
-  color: rgb(183, 17, 17);
-  font-weight: bold;
-}
 
 .Footer{
   background-color: #70CDD7;
