@@ -1,9 +1,9 @@
 
-In the project terminal, you can run:
-
-    "npm start"
+Once in the 'flask-run' directory, open the terminal and run the command:
+    "python app.py"
     This runs the app in the development mode.
-    You can also open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    There will be a linnk the terminal telling you which URL it's running on.
+    It runs on 'http://127.0.0.1:8000' typically
 
 Once on a local host on web browser:
 
@@ -21,14 +21,14 @@ To view the webite screen on the correct Iphone screen:
 We currently have built three screens via HTML/CSS. To view the other screens:
 
     * In the search bar of the localhost browser add either
-        1. "/userprofile"
+        1. "/#userprofile"
             or
-        2. "/requestgroup"
+        2. "/#requestgroup"
         to the end of the link to access the other Iphone pages.
     * The link should look like:
-        1. http://localhost:3000/userprofile
+        1. http://127.0.0.1:8000/#userprofile
             or
-        2. http://localhost:3000/requestgroup
+        2. http://127.0.0.1:8000/#requestgroup
 
 The only outside resources/ tools we used in this code were downloaded images from the 
 internet that are all currently in the /src/images folder. 
