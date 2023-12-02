@@ -7,6 +7,11 @@
     font-size: 30px;
     padding-bottom: 20px;
   }
+
+  .profile-pic {
+    height: 10px;
+    border-radius: 50%;
+  }
   
   .Add-button{
     background-color: #70CDD7; 
@@ -53,7 +58,7 @@
     margin: 5px;
     margin-top: 10px;
     margin-left: 20px;
-    background-color: bisque;
+    background-color: white;
   }
   
   .list-item-row{
@@ -71,7 +76,7 @@
     border-radius: 3px;
     width: 100%;
     height: 110px;
-    background-color: rgb(168, 143, 111);
+    background-color: rgb(249, 226, 195);
   
   }
   
@@ -101,9 +106,9 @@
     width: 42%;
     margin: 5px;
     height: 80%;
-    padding-top: 15px;
+    padding-top: 10px;
     text-align: center;
-    color: rgb(183, 17, 17);
+    color: rgb(232, 33, 33);
     font-weight: bold;
   }
   

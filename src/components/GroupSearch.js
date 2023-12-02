@@ -1,4 +1,5 @@
 import './GroupSearch.css';
+import LionImg from "../images/lion.jpg"
 import React from "react";
 
 function GroupSearch(){
