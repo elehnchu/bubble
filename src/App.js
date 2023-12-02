@@ -1,13 +1,13 @@
 import './App.css';
 import GroupSearch from './components/GroupSearch.js';
 import UserProfile from './components/UserProfile';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import RequestGroup from './components/RequestGroup.js';
 
 
 function App() {
   return (
-    <Router>
+    <Router basename="/" hashType="noslash">
       <div className="App">
         <div className="Header">
         </div>
