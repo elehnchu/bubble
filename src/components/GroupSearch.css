@@ -106,6 +106,14 @@
     color: rgb(183, 17, 17);
     font-weight: bold;
   }
+
+  .profile-image {
+    width: 100px;
+    padding: 5px;
+    height: auto;
+    align-self: auto;
+    border-radius: 50%;
+  }
   
   .Footer{
     background-color: #70CDD7;
