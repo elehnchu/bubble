@@ -4,6 +4,7 @@ import UserProfile from './components/UserProfile';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import RequestGroup from './components/RequestGroup.js';
 import CreateGroup from './components/CreateGroup.js'
+import BubbleCreated from './components/BubbleCreated.js'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/userprofile" element={<UserProfile />} />
           <Route path="/requestgroup" element={<RequestGroup />} />
           <Route path="/creategroup" element={<CreateGroup />} />
+          <Route path="/bubblecreated" element={<BubbleCreated />} />
         </Routes>
       </div>
     </Router>
