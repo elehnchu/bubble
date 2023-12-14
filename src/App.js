@@ -5,6 +5,7 @@ import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import RequestGroup from './components/RequestGroup.js';
 import CreateGroup from './components/CreateGroup.js'
 import BubbleCreated from './components/BubbleCreated.js'
+import NoBubbleFound from './components/NoBubbleFound.js';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/requestgroup" element={<RequestGroup />} />
           <Route path="/creategroup" element={<CreateGroup />} />
           <Route path="/bubblecreated" element={<BubbleCreated />} />
+          <Route path="/nobubblefound" element={<NoBubbleFound />} />
         </Routes>
       </div>
     </Router>
