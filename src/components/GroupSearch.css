@@ -3,6 +3,7 @@
   }
 
   .Header {
+<<<<<<< HEAD
     background-color: #6DCFD9;
     min-height: 10px;
     min-height: 90px;
@@ -20,6 +21,9 @@
     margin: 0;
     padding: 0;
     line-height: 90px;
+=======
+    font-size: 30px;
+>>>>>>> 5094308c42a505cd32bbb824e383b3131d799ece
   }
 
   .profile-pic {
