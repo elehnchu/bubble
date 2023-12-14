@@ -7,6 +7,7 @@ import CreateGroup from './components/CreateGroup.js'
 import BubbleCreated from './components/BubbleCreated.js'
 import NoBubbleFound from './components/NoBubbleFound.js';
 import Login from './components/Login.js';
+import SignUp from './components/SignUp.js';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/bubblecreated" element={<BubbleCreated />} />
           <Route path="/nobubblefound" element={<NoBubbleFound />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </div>
     </Router>
