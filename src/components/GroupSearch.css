@@ -3,9 +3,23 @@
   }
 
   .Header {
-    margin-top: -5px;
-    font-size: 30px;
-    padding-bottom: 20px;
+    background-color: #6DCFD9;
+    min-height: 10px;
+    min-height: 90px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    float: left;
+    justify-content: center;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    line-height: 90px;
   }
 
   .profile-pic {
@@ -69,6 +83,7 @@
     height: 70px;
     float: left;
     display: center;
+    background-color: black;
   }
   
   .list-item-icons {
@@ -120,15 +135,3 @@
     border-radius: 50%;
   }
   
-  .Footer{
-    background-color: #70CDD7;
-    min-height: 60px;
-    width: 100%;
-    height: 100%;
-    font-weight: 500;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 25px;
-    color: white;
-  }

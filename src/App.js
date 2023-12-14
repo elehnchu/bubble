@@ -6,7 +6,7 @@ import RequestGroup from './components/RequestGroup.js';
 import CreateGroup from './components/CreateGroup.js'
 import BubbleCreated from './components/BubbleCreated.js'
 import NoBubbleFound from './components/NoBubbleFound.js';
-
+import Courses from './components/Courses.js';
 
 function App() {
   return (
@@ -21,7 +21,10 @@ function App() {
           <Route path="/creategroup" element={<CreateGroup />} />
           <Route path="/bubblecreated" element={<BubbleCreated />} />
           <Route path="/nobubblefound" element={<NoBubbleFound />} />
+          <Route path="/courses" element={<Courses />} />
         </Routes>
+        <div className="Footer">
+        </div>
       </div>
     </Router>
   );

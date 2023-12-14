@@ -1,0 +1,75 @@
+.App {
+    text-align: center;
+  }
+
+  .Header {
+    margin-top: -5px;
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+  
+.fish-pic1{
+    max-height: 50px;
+    float: left;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+.fish-pic2{
+    max-height: 50px;
+    float: left;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+.fish-pic3{
+    max-height: 50px;
+    float: left;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+.fish-pic4{
+    max-height: 50px;
+    float: left;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+  
+
+  .list-item{
+    height: 130px;
+    width: 130px;
+    float: left;
+    display: center;
+    align-self: center;
+    flex-direction: row;
+    margin: 5px;
+    margin-top: 10px;
+    margin-left: 35px;
+    background-color: white;
+    border-radius: 100%;
+  }
+
+  .list-item-group-name {
+    font-size: 16px;
+    width: 70%;
+    margin: 16px;
+    padding-top: 20px;
+    height: 60%;
+    padding-left: 5px;;
+    font-weight: bold;
+    text-align: center;
+    float: center;
+    color: gray;
+    
+  }
+  
+  .list-item-members{
+    padding-top: 10px;
+    font-size: 12px;
+    font-weight: light;
+  }
+  
+ 
+  .App-link {
+    color: #61dafb;
+  }
+  

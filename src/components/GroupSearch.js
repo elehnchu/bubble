@@ -20,7 +20,6 @@ function GroupSearch(){
             <button class= "Add-button">
                 +
             </button>
-            <div className ="Footer"></div>
         </div>
     );
 }
