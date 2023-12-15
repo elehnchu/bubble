@@ -1,6 +1,6 @@
 import './SignIn.css'
 import React from "react";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import homeFish from '../images/home-fish.png'
 
 function SignUp () {
@@ -10,6 +10,19 @@ function SignUp () {
         password: '',
         phoneNumber: ''
     });
+
+    const handleRegister = () => {
+        fetch('http://127.0.0.1:5000/users', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(inputs)
+        })
+        .then(response => response.json())
+        .then(data => console.log('User registered:', data))
+        .catch(error => console.error('Error registering user:', error))
+    }
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -21,27 +34,27 @@ function SignUp () {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log('Sign Up data submitted:', inputs)
+        handleRegister();
     }
     return (
         <div className='background'>
             <div className='title'>bubble</div>
-            <img className='home-image' src={homeFish}></img>
+            <img className='home-image' src={homeFish} alt='fishes'></img>
             <div className='form'>
             <form onSubmit={handleSubmit}>
-                <label class="label" for="name">Name</label><br></br>
-                <input class="form-input" type="text" id="name" name="name" value={inputs.name} onChange={handleChange}></input>
+                <label className="label" htmlFor="name">Name</label><br></br>
+                <input className="form-input" type="text" id="name" name="name" value={inputs.name} onChange={handleChange}></input>
                 <br></br>
-                <label class="label" for="email">Email</label><br></br>
-                <input class="form-input" type="text" id="email" name="email" value={inputs.email} onChange={handleChange}></input>
+                <label className="label" htmlFor="email">Email</label><br></br>
+                <input className="form-input" type="text" id="email" name="email" value={inputs.email} onChange={handleChange}></input>
                 <br></br>
-                <label class="label" for="password">Password</label><br></br>
-                <input class="form-input" type="password" id="password" name="password" value={inputs.password} onChange={handleChange}></input>
+                <label className="label" htmlFor="password">Password</label><br></br>
+                <input className="form-input" type="password" id="password" name="password" value={inputs.password} onChange={handleChange}></input>
                 <br></br>
-                <label class="label" for="phoneNumber">Phone Number</label><br></br>
-                <input class="form-input" type="text" id="phone" name="phoneNumber" value={inputs.phoneNumber} onChange={handleChange}></input>
+                <label className="label" htmlFor="phoneNumber">Phone Number</label><br></br>
+                <input className="form-input" type="text" id="phone" name="phoneNumber" value={inputs.phoneNumber} onChange={handleChange}></input>
                 <br></br>
-                <input class="form-submit" type="submit" value="REGISTER"></input>
+                <input className="form-submit" type="submit" value="REGISTER"></input>
             </form>
             </div>
 

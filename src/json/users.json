@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "email": "john@example.com",
+    "password": "secure",
+    "phoneNumber": "123-456-7890",
+    "profilePicUrl": "url",
+    "major": "Computer Science",
+    "minor": "Music",
+    "tags": [
+      "math lover"
+    ],
+    "bio": "bio",
+    "courses": [
+      {
+        "number": "COMS 4170",
+        "title": "UI Design"
+      }
+    ],
+    "favoriteProfiles": [
+      1
+    ]
+  },
+  {
+    "name": "Jeremy",
+    "email": "example",
+    "password": "secure",
+    "phoneNumber": "1234",
+    "id": 2
+  },
+  {
+    "name": "Yelena",
+    "email": "example@email",
+    "password": "secure1",
+    "phoneNumber": "1234567890",
+    "id": 3
+  }
+]
