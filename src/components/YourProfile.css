@@ -4,7 +4,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    text-align: cetner;
+    text-align: center;
     float: left;
     font-size: 80px;
     color: white;
@@ -13,35 +13,39 @@
     .back-arrow {
         height: 40px;
         width: 40px;
-        padding-left: 10px;
+        position: absolute;
+        top: 30px;
+        cursor: pointer;
         -webkit-transform: rotate(90deg);
         -moz-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
         -o-transform: rotate(90deg);
         transform: rotate(90deg);
-        padding-bottom: 20%;
     }
-        
+
     .back-button {
         background-color: transparent;
         border: none;
     }
-        
+
     .back {
+        position: relative;
         display: inline-block;
+        text-align: center;
+        left:-100px;
     }
+
 
     .your-profile {
         text-align: center;
     }
 
-    .gear-image {
+    .gear-img {
         height: 40px;
         width: 40px;
         position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-50%);
+        right: 20px;
+        top: 30px;
         cursor: pointer;
     }
 
@@ -52,14 +56,15 @@
         
     .gear {
         display: inline-block;
+        text-align: center;
     }
     
     .pencil {
         position: absolute;
-        right: 15px;
-        top: calc(100% + 15px); /* Below the header */
+        top: 120px;
+        right: 20px;
         cursor: pointer;
-    }
+    }    
     
     .profile-photo {
         position: relative;
@@ -80,7 +85,7 @@
     
     .email-text {
         margin-top: 10px;
-        font-size: 24pox;
+        font-size: 24px;
         color: #2699FB;
     }
     

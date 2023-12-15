@@ -15,7 +15,6 @@ const YourProfile = () => {
             </button>
         </div>
         Profile
-        <img src={GearImage} alt="Gear" className="gear" />
         <div className="gear">
             <button className="gear-button">
                 <img className = "gear-img" src={GearImage} alt="gear"></img>
