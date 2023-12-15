@@ -35,8 +35,8 @@
   }
   
   .group-pic {
-    height: 120px;
-    width: 120px;
+    height: 100px;
+    width: 100px;
     padding-top: 25px;
     padding-bottom: 10px;
     border-radius: 50%;
@@ -44,7 +44,7 @@
   
   .group-name {
     color: rgb(38, 153, 251);
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
     padding-bottom: 10px;
   }
@@ -65,7 +65,7 @@
   }
   
   .profile-pic {
-    height: 45px;
+    height: 35px;
     border-radius: 50%;
   }
   
@@ -100,7 +100,7 @@
     text-align: left;
     border-radius: 10px;
     padding: 20px;
-    padding-bottom: 35px;
+    padding-bottom: 20px;
     margin-top: 15px;
     margin-left: 10%;
     margin-right: 10%;
