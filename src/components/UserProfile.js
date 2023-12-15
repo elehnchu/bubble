@@ -1,21 +1,20 @@
 // UserProfile.js
 import React from 'react';
 import './UserProfile.css';
+import './Star.css'
+import Star from '../images/star.jpg'
 import DefaultProfile from '../assets/profile-photos/default.png'
 
 const UserProfile = () => {
   return (
     <>
-    <div className="Header">Profile</div>
+    <div className="Header"></div>
     <div className="user-profile">
-      <img
-        src={DefaultProfile}
-        alt=''
-        className="profile-photo"
-      />
+        <img src={DefaultProfile} alt='' className="profile-photo" />
+        <img src={Star} alt='' />
       <h1 className="user-text">User</h1>
-      <p className="email-text">abc123@columbia.edu</p>
-      <div className="tags">
+      <p className="email-text">user1@columbia.edu</p>
+      <div className="detail-content">
         <div className="tag">night owl</div>
         <div className="tag">group learner</div>
         <div className="tag">coffee lover</div>
