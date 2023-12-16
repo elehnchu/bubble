@@ -5,8 +5,10 @@ import React from "react";
 function GroupSearch(){
     return (
         <div className="Bubble_Header">
-            <div className ="Header">
+            <div className ="Header_course_title">
+              <div className = "Header_text">
                 COMS 4170
+              </div>
             </div>
             <form className= "Search-bar">
                 <input class="form-input" type="text" id="name" placeholder="Search Group"></input>
@@ -20,6 +22,7 @@ function GroupSearch(){
             <button class= "Add-button">
                 +
             </button>
+
         </div>
     );
 }
@@ -28,6 +31,7 @@ export default GroupSearch;
 
 function ListItem({ image, groupName, description, memberNum }) {
     return (
+      <div className = "list-item-container">
       <div className="list-item">
         <div className="list-item-icons">
           <img src={image} alt="Group Icon" className="profile-image" />
@@ -39,6 +43,7 @@ function ListItem({ image, groupName, description, memberNum }) {
           </div>
           <div className="list-item-description">{description}</div>
         </div>
+      </div>
       </div>
     );
   }
