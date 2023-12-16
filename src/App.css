@@ -25,9 +25,11 @@
 
 .Footer{
   background-color: #70CDD7;
-  min-height: 50px;
-  width: 100%; 
-  height: 100%;
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
   font-weight: 500;
   display: flex;
   flex-direction: row;
