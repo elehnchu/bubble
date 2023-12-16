@@ -1,17 +1,17 @@
-import './App.css';
-import GroupSearch from './components/GroupSearch.js';
+import React from 'react';
+import GroupSearch from './components/GroupSearch';
 import UserProfile from './components/UserProfile';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
-import YourProfile from './components/YourProfile.js';
-import RequestGroup from './components/RequestGroup.js';
-import CreateGroup from './components/CreateGroup.js'
-import BubbleCreated from './components/BubbleCreated.js'
-import NoBubbleFound from './components/NoBubbleFound.js';
-import Courses from './components/Courses.js';
-import Login from './components/Login.js';
-import SignUp from './components/SignUp.js';
-import ChatSearch from './components/ChatSearch.js';
-
+import YourProfile from './components/YourProfile';
+import RequestGroup from './components/RequestGroup';
+import CreateGroup from './components/CreateGroup';
+import BubbleCreated from './components/BubbleCreated';
+import NoBubbleFound from './components/NoBubbleFound';
+import Courses from './components/Courses';
+import Login from './components/Login';
+import SignUp from './components/SignUp';
+import ChatSearch from './components/ChatSearch';
+import ChannelList from './components/ChannelList'; // Import the ChannelList component
 
 function App() {
   return (
@@ -28,10 +28,10 @@ function App() {
           <Route path="/courses" element={<Courses />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/chatsearch" element={<ChatSearch />} />
+          <Route path="/chatsearch/:channelId" element={<ChatSearch />} /> {/* Add route for chat search */}
+          <Route path="/channellist" element={<ChannelList />} /> {/* Add route for channel list */}
         </Routes>
-        <div className="Footer">
-        </div>
+        <div className="Footer"></div>
       </div>
     </Router>
   );
