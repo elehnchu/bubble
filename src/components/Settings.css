@@ -2,45 +2,102 @@
     text-align: center;
   }
 
-  .Header-settings {
-      background-color: #6DCFD9;
-      min-height: 40px;
-      width: 100%;
-      height: 90px;
-      margin-bottom: 1000px;
+
+  .Back-arrow {
+    height: 20px;
+    width: 20px;
+    background-size: contain;
+    float: left;
+    margin-top: 35px;
+    margin-left: 20px;
+  
+  }
+  
+    .Header-settings {
+        background-color: #6DCFD9;
+        min-height: 40px;
+        width: 100%;
+        height: 90px;
+        margin-bottom: 1000px;
+        margin: 0;
+        padding: 0;
+        line-height: 90px;
+        float: left;
+        align-self: center;
+        display: center;
+        overflow: hidden;
+    }
+  
+    .Header-settings-title{
+      height: 100px;
+      width: 70%;
+      padding-right: 60px;
+      float: right;
       font-size: 30px;
       color: white;
       font-weight: light bold;
-      margin: 0;
-      padding: 0;
-      line-height: 90px;
-  }
+    }
 
   
 
 .Settings-container{
-  height: 360px;
-  width:100%;
+  height: 510px;
+  width:78%;
   overflow: scroll;
+  margin-left: 40px;
 }
 
 .General-title{
     float: left;
-    font-size: 10px;
+    font-size: 15px;
     color: #6DCFD9;
+    padding-top: 30px;;
+    font-weight: bold;
+    margin-bottom: 9px;
 }
 .Info-title{
+  font-weight: bold;
+  margin: 9px;
     float: left;
-    font-size: 10px;
+    font-size: 15px;
     color: #6DCFD9;
 }
 
+.list-item-settings{
+  margin: 5px;
+  height: 50px;
+  width: 98%;
+  float: left;
+  align-self: center;
+  display: center;
+  overflow: hidden;
+}
+
+.icon-image{
+  margin-left: 5px;
+  margin-top: 9px;
+  height: 30px;
+  width: 30px;
+  float: left;
+
+}
 .list-item-settings-name{
     height: 20px;
-    width: 300px;
-    background-color: aqua;
+    width: 200px;
     margin: 5px;
+    margin-top: 15px;
+    margin-left: 10px;
+    float: left;
+    text-align: left;
+  font-weight: lighter bold;
+}
 
+.right-arrow{
+  margin-top: 19px;
+  height: 14px;
+  width: 10px;
+  float: right;
+  background-image: url(../images/right_arrow.png);
 }
  
   .App-link {
