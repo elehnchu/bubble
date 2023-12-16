@@ -10,6 +10,7 @@ import NoBubbleFound from './components/NoBubbleFound.js';
 import Courses from './components/Courses.js';
 import Login from './components/Login.js';
 import SignUp from './components/SignUp.js';
+import ChatSearch from './components/ChatSearch.js';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/courses" element={<Courses />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/chatsearch" element={<ChatSearch />} />
         </Routes>
         <div className="Footer">
         </div>

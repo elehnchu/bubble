@@ -1,7 +1,7 @@
 // UserProfile.js
 import React from 'react';
 import './UserProfile.css';
-import './Star.css'
+import './Star.css';
 import Star from '../images/star.jpg'
 import DefaultProfile from '../assets/profile-photos/default.png'
 

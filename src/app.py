@@ -2,10 +2,18 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import json
 import os
+from dotenv import load_dotenv
+from stream_chat import StreamChat
+load_dotenv() # load env variables
+
+stream_api_key = os.getenv('STREAM_API_KEY')
+stream_api_secret = os.getenv('STREAM_API_SECRET')
+stream_app_id = os.getenv('STREAM_APP_ID')
 
 app = Flask(__name__)
 CORS(app)
 users_file_path = 'json/users.json'
+chat_client = StreamChat(api_key=stream_api_key, api_secret=stream_api_secret)
 
 def load_user_data():
     if os.path.exists(users_file_path):
@@ -33,6 +41,19 @@ def add_user():
     print(users)
     return jsonify(new_user), 201
 
+@app.route('/stream-token', methods=['POST'])
+def get_stream_token():
+    user_data = request.json
+    users = load_user_data()
+
+    user = next((u for u in users if u['id'] == user_data['user_id'] and u['password'] == user_data['password']), None)
+    if not user:
+        return jsonify({'message': 'Invalid credentials'}), 401
+
+    token = chat_client.create_token(str(user['id']))
+    return jsonify({'token': token, 'user': user})
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
-

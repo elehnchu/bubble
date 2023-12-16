@@ -35,5 +35,19 @@
     "password": "secure1",
     "phoneNumber": "1234567890",
     "id": 3
+  },
+  {
+    "name": "Lara",
+    "email": "lara@gmail.com",
+    "password": "pass",
+    "phoneNumber": "1112223333",
+    "id": 4
+  },
+  {
+    "name": "Test",
+    "email": "test@gmail.com",
+    "password": "pass",
+    "phoneNumber": "1111223333",
+    "id": 5
   }
 ]
