@@ -2,19 +2,40 @@
     text-align: center;
   }
 
-  .Header_course_title{
+  .Back-arrow {
+    height: 20px;
+    width: 20px;
+    background-size: contain;
+    float: left;
+    margin-top: 35px;
+    margin-left: 20px;
+  
+  }
+  
+  .Header_group_title {
     background-color: #6DCFD9;
     min-height: 40px;
     width: 100%;
     height: 90px;
     margin-bottom: 1000px;
-    font-size: 30px;
-    color: white;
-    font-weight: light bold;
     margin: 0;
     padding: 0;
     line-height: 90px;
-  }
+    float: left;
+    align-self: center;
+    display: center;
+    overflow: hidden;
+}
+
+.Header-groupsel-title{
+  height: 100px;
+  width: 70%;
+  padding-right: 60px;
+  float: right;
+  font-size: 30px;
+  color: white;
+  font-weight: light bold;
+}
 
   .Header_text {
     padding-top: 10px;
@@ -34,7 +55,7 @@
     text-align: center;
     float: right;
     margin-top: 7px;
-    margin-bottom: 5px;
+    margin-bottom: 10%;
     margin-right: 18px;
     text-decoration: none;
     font-size: 30px;
@@ -88,10 +109,10 @@
   
   .list-item-icons {
     font-size: 50px;
-    border-radius: 3px;
+    border-radius: 5px;
     width: 100%;
     height: 110px;
-    background-color: rgb(249, 226, 195);
+    background-color: #A68C69;
   
   }
   

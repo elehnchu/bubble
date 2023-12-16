@@ -10,6 +10,7 @@ import BubbleCreated from './components/BubbleCreated';
 import NoBubbleFound from './components/NoBubbleFound';
 import Courses from './components/Courses';
 import Settings from './components/Settings.js';
+import LikedProfiles from './components/LikedProfiles.js';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
 import ChatSearch from './components/ChatSearch';
@@ -29,6 +30,7 @@ function App() {
           <Route path="/nobubblefound" element={<NoBubbleFound />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/likedprofiles" element={<LikedProfiles />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/chatsearch/:channelId" element={<ChatSearch />} /> {/* Add route for chat search */}

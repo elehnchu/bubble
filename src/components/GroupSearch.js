@@ -1,23 +1,26 @@
 import './GroupSearch.css';
 import lionImg from "../images/lion.jpg"
+import Back_arrow from "../images/Backward arrow.png"
 import React from "react";
 
 function GroupSearch(){
     return (
         <div className="Bubble_Header">
-            <div className ="Header_course_title">
-              <div className = "Header_text">
-                COMS 4170
-              </div>
-            </div>
+            <div className ="Header_group_title">
+                    <div style={{ backgroundImage:`url(${Back_arrow})` }}className = "Back-arrow">
+                    </div>
+                    <div className ="Header-groupsel-title">
+                        COMS 4170
+                    </div>
+                </div>
             <form className= "Search-bar">
                 <input class="form-input" type="text" id="name" placeholder="Search Group"></input>
             </form>
             <div className = "List">
-                <ListItem  index={1} image={lionImg} groupName="Group 1" description= "90% match" memberNum= "Members:  2 of 5"></ListItem>
-                <ListItem  index={2} image={lionImg} groupName="Group 2" description= "58% match" memberNum= "Members:  2 of 5"></ListItem>
-                <ListItem  index={3} image={lionImg} groupName="Group 3" description= "25% match" memberNum= "Members:  2 of 5"></ListItem>
-                <ListItem  index={4} image={lionImg} groupName="Group 4" description= "15% match" memberNum= "Members:  2 of 5"></ListItem>
+                <ListItem  index={1} image={lionImg} groupName="Group 1" description= "90% match" memberNum= "Members:  2 of 3"></ListItem>
+                <ListItem  index={2} image={lionImg} groupName="Group 2" description= "58% match" memberNum= "Members:  3 of 5"></ListItem>
+                <ListItem  index={3} image={lionImg} groupName="Group 3" description= "25% match" memberNum= "Members:  5 of 8"></ListItem>
+                <ListItem  index={4} image={lionImg} groupName="Group 4" description= "15% match" memberNum= "Members:  3 of 10"></ListItem>
             </div>
             <button class= "Add-button">
                 +

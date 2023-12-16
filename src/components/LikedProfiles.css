@@ -1,0 +1,112 @@
+.App {
+    text-align: center;
+  }
+
+  .Back-arrow {
+    height: 20px;
+    width: 20px;
+    background-size: contain;
+    float: left;
+    margin-top: 35px;
+    margin-left: 20px;
+  
+  }
+  
+  .Header_Profile_title {
+    background-color: #6DCFD9;
+    min-height: 40px;
+    width: 100%;
+    height: 90px;
+    margin-bottom: 1000px;
+    margin: 0;
+    padding: 0;
+    line-height: 90px;
+    float: left;
+    align-self: center;
+    display: center;
+    overflow: hidden;
+}
+
+.Header-Profile-title{
+  height: 100px;
+  width: 70%;
+  padding-right: 60px;
+  float: right;
+  font-size: 30px;
+  color: white;
+  font-weight: light bold;
+}
+
+.list-item-container{
+    overflow: scroll;
+}
+
+  .list-item-row{
+    align-self: center;
+    flex-direction: row;
+    margin-top: 3px;
+    width: 85%;
+    height: 80px;
+    float: left;
+    margin-left: 30px;
+    display: center;
+    overflow: hidden;
+  }
+
+  .icon-userimage{
+    margin-left: 5px;
+    margin-top: 9px;
+    height: 55px;
+    width: 55px;
+    float: left;
+    background-image: url("../images/user_icon.png");
+    background-size: contain;
+  }
+  
+  .list-item-email{
+    padding-top: 4px;
+    font-size: 12px;
+    font-weight: light;
+    float: left;
+  
+  }
+
+  .user-container{
+    height: 70px;
+    width: 150px;
+    float: left;
+    margin-left: 13px;
+    overflow: hidden;
+  }
+  
+  
+
+  .list-item-user-name{
+      height: 20px;
+      width: 100px;
+      margin-top: 15px;
+      float: left;
+      font-weight: bold;
+      text-align: left;
+      color: #255155;
+    font-weight: lighter bold;
+  }
+  
+  .list-item-description {
+    height: 40px;
+    width: 80px;
+    float: right;
+    margin-top: 15px;
+    text-align: center;
+    color: rgb(232, 33, 33);
+    font-size: 15px;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+  
+
+
+
+  
