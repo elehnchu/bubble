@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { StreamChat } from 'stream-chat';
+//import { StreamChat } from 'stream-chat';
 import { Chat, Channel, ChannelHeader, MessageList, MessageInput, Thread, Window } from 'stream-chat-react';
 import { useParams } from 'react-router-dom'; // Import useParams
-import 'stream-chat-react/dist/css/index.css';
+//import 'stream-chat-react/dist/css/index.css';
 import './ChatSearch.css';
 
 const ChatSearch = () => {
