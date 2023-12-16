@@ -50,10 +50,10 @@ def get_stream_token():
     if not user:
         return jsonify({'message': 'Invalid credentials'}), 401
 
+    print(user['id'])
     token = chat_client.create_token(str(user['id']))
+    print(token)
     return jsonify({'token': token, 'user': user})
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)
