@@ -17,6 +17,8 @@ import Login from './components/Login';
 import SignUp from './components/SignUp';
 import ChatSearch from './components/ChatSearch';
 import ChannelList from './components/ChannelList';
+import MemberList from './components/MemberList';
+
 
 function App() {
   return (
@@ -36,8 +38,9 @@ function App() {
             <Route path="/settings" element={<Settings />} />
             <Route path="/likedprofiles" element={<LikedProfiles />} />
             <Route path="/signup" element={<SignUp />} />
-            <Route path="/chatsearch/:channelId" element={<ChatSearch />} /> {/* Add route for chat search */}
-            <Route path="/channellist" element={<ChannelList />} /> {/* Add route for channel list */}
+            <Route path="/chatsearch/:channelId" element={<ChatSearch />} />
+            <Route path="/channellist" element={<ChannelList />} />
+            <Route path="/memberlist" element={<MemberList />} />
           </Routes>
           <div className="Footer"></div>
         </div>

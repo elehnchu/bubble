@@ -1,8 +1,12 @@
-/* Add this class to the container of your MessageList and MessageInput */
+
 .str-chat__input-flat {
-    padding-bottom: 90px !important; /* Adjust this value to the height of your footer */
+    padding-bottom: 90px !important;
     z-index: 10px;
   }
+
+.str-chat__channel-list {
+    background-color: #70CDD7 !important;
+}
 
 .users-list {
     background: #ffffff;
