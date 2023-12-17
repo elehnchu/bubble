@@ -1,6 +1,12 @@
-@media screen { 
+/* Add this class to the container of your MessageList and MessageInput */
+.str-chat__input-flat {
+    padding-bottom: 90px !important; /* Adjust this value to the height of your footer */
+    z-index: 10px;
+  }
+
+/*@media screen { 
     .str-chat {
-        /* display: flex; */
+        display: flex;
         position: relative;
         z-index: 1000000; 
         width: 300px;
@@ -8,14 +14,14 @@
         background-color: transparent !important;
     }
 
-    /* .str-chat__list {
+    .str-chat__list {
         position: relative;
         z-index: 12; 
         width: 100vw;
         transform: translate(217px);
-        /* background-color: transparent !important; */
+        background-color: transparent !important;
 
-}
+*/
 
 
 

@@ -3,7 +3,7 @@ import { StreamChat } from 'stream-chat';
 import { Chat, Channel, ChannelList, ChannelHeader, MessageList, InfiniteScroll, MessageInput, Thread, Window } from 'stream-chat-react';
 import { useNavigate } from 'react-router-dom';
 import 'stream-chat-react/dist/css/index.css';
-//import './ChannelList.css';
+import './ChannelList.css';
 
 const ChannelListPage = () => {
   // const client = StreamChat.getInstance(process.env.REACT_APP_STREAM_API_KEY);
@@ -29,18 +29,15 @@ const ChannelListPage = () => {
           Paginator={InfiniteScroll}
           showChannelSearch
       />
-      <div className='test'>
         <Channel>
           <Window>
             <ChannelHeader />
-            <MessageInput />
-            <MessageList />
             {/* <MessageInput /> */}
+            <MessageList />
+            <MessageInput />
           </Window>
           <Thread />
-          
         </Channel>
-      </div>
     </Chat>
   );
 };
