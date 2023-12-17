@@ -17,7 +17,7 @@ const UserProfile = () => {
 
   const navigate = useNavigate();
     const handleBackClick = () => {
-        navigate('/')
+        navigate(-1)
     }
     const handleChatClick = () => {
       navigate('/channellist') // fix later

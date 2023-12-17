@@ -23,6 +23,10 @@ const MemberList = () => {
     navigate(-1);
   };
 
+  const handleMemberClick = (memberId) => {
+    navigate('/userprofile', { state: { memberId } });
+  };
+
   const handleChatClick = () => {
     navigate('/channellist') // fix later
   }
@@ -45,11 +49,11 @@ const MemberList = () => {
       </div>
       <div className="member-list-container">
         {membersInfo.map(member => (
-          <div key={member.id} className="member-item">
+          <div key={member.id} className="member-item" onClick={() => handleMemberClick(member.id)}>
             <img src={userImg} alt={member.name} className="member-image" />
             <div className="member-info">
               <div className="member-name">{member.name}</div>
-              <div className="member-status">{member.email} _____________________________________________ </div>
+              <div className="member-status">{member.email} ____________________________________________________ </div>
             </div>
           </div>
         ))}
