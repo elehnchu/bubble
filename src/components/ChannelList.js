@@ -1,24 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback, useContext } from 'react';
 import { StreamChat } from 'stream-chat';
 import { useNavigate } from 'react-router-dom';
+import { ChannelStateContext } from 'stream-chat-react';
 import { Chat, Channel, ChannelList, ChannelHeader, showMembers, MessageList, InfiniteScroll, MessageInput, Thread, Window, useChannelStateContext } from 'stream-chat-react';
 import 'stream-chat-react/dist/css/index.css';
 import './ChannelList.css';
+
+const Members = ({client}) => {
+
+  const channel = useChannelStateContext(); 
+  const navigate = useNavigate();
+
+  const handleChannelClick = useCallback(() => {
+    const id = channel.channel.id;
+    console.log('Channel ID', channel);
+    navigate('/memberlist', { 'state': { 'members_dict': channel.members } });
+  }, [channel, navigate]);
+
+  return (
+    <div className='seeMembers' onClick={handleChannelClick}></div>
+  );
+};
 
 const ChannelListPage = () => {
 
   const filters = { members: { $in: ['5'] } }; // User ID '5'
   const sort = { last_updated: -1 };
   const options = { limit: 20, messages_limit: 20 };
-
-  const navigate = useNavigate();
-  const { channel } = useChannelStateContext(); 
-
-  const handleHeaderClick = () => {
-    if (channel) {
-      navigate('/memberlist', { state: { channelId: channel.id } });
-    }
-  };
 
   const client = new StreamChat(process.env.REACT_APP_STREAM_API_KEY);
   client.connectUser(
@@ -27,23 +35,26 @@ const ChannelListPage = () => {
   )
 
   return (
-    <Chat client={client}>
-      <ChannelList
-          filters={filters}
-          sort={sort}
-          options={options}
-          Paginator={InfiniteScroll}
-          showChannelSearch
-      />
-      <Channel>
-        <Window>
-          <ChannelHeader onClick={handleHeaderClick} />
-          <MessageList />
-          <MessageInput />
-        </Window>
-        <Thread />
-      </Channel>
-    </Chat>
+    <> 
+      <Chat client={client}>
+        <ChannelList
+            filters={filters}
+            sort={sort}
+            options={options}
+            Paginator={InfiniteScroll}
+            showChannelSearch
+        />
+        <Channel>
+          <Members client={client}/>
+          <Window>
+            <ChannelHeader />
+            <MessageList />
+            <MessageInput />
+          </Window>
+          <Thread />
+        </Channel>
+      </Chat>
+    </>
   );
 };
 

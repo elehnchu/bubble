@@ -76,5 +76,14 @@
     "modality": "",
     "bio": "",
     "id": 7
+  },
+  {
+    "name": "4111 4LYFE",
+    "maxNoMembers": "3",
+    "meetFreq": "3",
+    "purpose": "",
+    "modality": "In-person",
+    "bio": "B)",
+    "id": 8
   }
 ]
