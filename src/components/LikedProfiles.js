@@ -2,19 +2,24 @@ import './LikedProfiles.css';
 import UserImg from "../images/user_icon.png"
 import Back_arrow from "../images/Backward arrow.png"
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 
 function LikedProfiles(){
+    const navigate = useNavigate();
+    const handleBackClick = () => {
+        navigate('/settings')
+    }
     return (
         <div className="Bubble_Header">
             <div className ="Header_Profile_title">
-                    <div style={{ backgroundImage:`url(${Back_arrow})` }}className = "Back-arrow">
+                    <div style={{ backgroundImage:`url(${Back_arrow})` }}className = "Back-arrow" onClick={handleBackClick}>
                     </div>
                     <div className ="Header-Profile-title">
                         Liked Profiles
                     </div>
                 </div>
             <form className= "Search-bar">
-                <input class="form-input" type="text" id="name" placeholder="Search User"></input>
+                <input className="form-input" type="text" id="name" placeholder="Search User"></input>
             </form>
             <div className = "List">
                 <ListItem  index={1} Uimage={UserImg} userName="User 1" description= "90% match" email= "user1@columbia.edu"></ListItem>

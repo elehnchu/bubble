@@ -3,6 +3,7 @@ import './App.css'
 import GroupSearch from './components/GroupSearch';
 import UserProfile from './components/UserProfile';
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { UserProvider } from './components/UserContext';
 // import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import YourProfile from './components/YourProfile';
 import RequestGroup from './components/RequestGroup';
@@ -20,25 +21,27 @@ import ChannelList from './components/ChannelList'; // Import the ChannelList co
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<GroupSearch />} />
-          <Route path="/userprofile" element={<UserProfile />} />
-          <Route path="/yourprofile" element={<YourProfile />} />
-          <Route path="/requestgroup/:groupId" element={<RequestGroup />} />
-          <Route path="/creategroup" element={<CreateGroup />} />
-          <Route path="/bubblecreated" element={<BubbleCreated />} />
-          <Route path="/nobubblefound" element={<NoBubbleFound />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/settings" element={<Settings />} />
-          <Route path="/likedprofiles" element={<LikedProfiles />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/chatsearch/:channelId" element={<ChatSearch />} /> {/* Add route for chat search */}
-          <Route path="/channellist" element={<ChannelList />} /> {/* Add route for channel list */}
-        </Routes>
-        <div className="Footer"></div>
-      </div>
+      <UserProvider>
+        <div className="App">
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/groupsearch" element={<GroupSearch />} />
+            <Route path="/userprofile" element={<UserProfile />} />
+            <Route path="/yourprofile" element={<YourProfile />} />
+            <Route path="/requestgroup/:groupId" element={<RequestGroup />} />
+            <Route path="/creategroup" element={<CreateGroup />} />
+            <Route path="/bubblecreated" element={<BubbleCreated />} />
+            <Route path="/nobubblefound" element={<NoBubbleFound />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/likedprofiles" element={<LikedProfiles />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/chatsearch/:channelId" element={<ChatSearch />} /> {/* Add route for chat search */}
+            <Route path="/channellist" element={<ChannelList />} /> {/* Add route for channel list */}
+          </Routes>
+          <div className="Footer"></div>
+        </div>
+      </UserProvider>
     </Router>
   );
 }

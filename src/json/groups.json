@@ -8,8 +8,15 @@
     "purpose": "Test",
     "modality": "Test",
     "bio": "Test",
-    "users": [1, 2],
-    "tags":["night owl", "group learner", "coffee lover"]
+    "users": [
+      1,
+      2
+    ],
+    "tags": [
+      "night owl",
+      "group learner",
+      "coffee lover"
+    ]
   },
   {
     "name": "",
@@ -18,7 +25,7 @@
     "purpose": "",
     "modality": "",
     "bio": "Test",
-    "tags":[],
+    "tags": [],
     "id": 2
   },
   {
@@ -42,5 +49,32 @@
     "gname": "s",
     "members": "3",
     "id": 4
+  },
+  {
+    "name": "",
+    "maxNoMembers": 1,
+    "meetFreq": 1,
+    "purpose": "",
+    "modality": "",
+    "bio": "",
+    "id": 5
+  },
+  {
+    "name": "",
+    "maxNoMembers": 1,
+    "meetFreq": 1,
+    "purpose": "",
+    "modality": "",
+    "bio": "",
+    "id": 6
+  },
+  {
+    "name": "",
+    "maxNoMembers": 1,
+    "meetFreq": 1,
+    "purpose": "",
+    "modality": "",
+    "bio": "",
+    "id": 7
   }
 ]

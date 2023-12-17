@@ -1,4 +1,5 @@
 import './Courses.css';
+import { useNavigate } from 'react-router-dom';
 import fishImg from "../images/fish_nobubbles.png"
 import React from "react";
 import fishsmall from "../images/fish_small.png"
@@ -10,10 +11,14 @@ import Back_arrow from "../images/Backward arrow.png"
 
 
 function Courses(){
+    const navigate = useNavigate();
+    const handleBackClick = () => {
+        navigate('/nobubblefound')
+    }
     return (
         <div className="Courses_Header">
                 <div className ="Header-courses">
-                    <div style={{ backgroundImage:`url(${Back_arrow})` }}className = "Back-arrow">
+                    <div style={{ backgroundImage:`url(${Back_arrow})` }}className = "Back-arrow" onClick={handleBackClick}>
                     </div>
                     <div className ="Header-courses-title">
                         Courses
@@ -43,8 +48,12 @@ function Courses(){
 export default Courses;
 
 function ListItem({ background_bubble, courseName, courseTitle}) {
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate('/groupsearch')
+    }
     return (
-      <div style={{ backgroundImage:`url(${background_bubble})` }} className="list-item-courses">
+      <div style={{ backgroundImage:`url(${background_bubble})` }} className="list-item-courses" onClick={handleClick}>
           <div className="list-item-courses-name">
             {courseName}
             
