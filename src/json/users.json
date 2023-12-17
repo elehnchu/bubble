@@ -57,11 +57,17 @@
     "id": 4
   },
   {
-    "name": "Test",
+    "name": "Jane Doe",
     "email": "test@gmail.com",
     "password": "pass",
     "phoneNumber": "1111223333",
-    "id": 5
+    "id": 5,
+    "major": "Statistics",
+    "minor": "Economics",
+    "bio": "Undergrad student in CC!",
+    "tags": [
+      "group learner"
+    ]
   },
   {
     "name": "Hugh Thomas",
