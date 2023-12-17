@@ -16,7 +16,7 @@ import LikedProfiles from './components/LikedProfiles.js';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
 import ChatSearch from './components/ChatSearch';
-import ChannelList from './components/ChannelList'; // Import the ChannelList component
+import ChannelList from './components/ChannelList';
 
 function App() {
   return (
