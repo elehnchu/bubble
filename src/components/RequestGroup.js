@@ -4,12 +4,17 @@ import back from "../images/arrow.png";
 import Back_arrow from "../images/Backward arrow.png";
 import groupImg from "../images/group.jpeg";
 import userImg from "../images/user.jpeg";
+import classesImg from '../images/footer_classes.png'
+import profileImg from '../images/footer_profile.png'
+import chatImg from '../images/footer_chat.png'
 import './RequestGroup.css';
 
 function RequestGroups({}) {
     const { groupId } = useParams();
     const [group, setGroup] = useState(null);
     const [users, setUsers] = useState([])
+
+
 
     useEffect(() => {
         fetch(`http://127.0.0.1:5000/groups/${groupId}`)
@@ -55,6 +60,18 @@ function RequestGroup ({groupPic, groupName, userData, tags, groupDescription}) 
   const handleBackClick = () => {
       navigate('/groupsearch')
   }
+  
+  const handleChatClick = () => {
+      navigate('/channellist') // fix later
+    }
+  
+    const handleClassesClick = () => {
+      navigate('/courses') // fix later
+    }
+  
+    const handleProfileClick = () => {
+      navigate('/yourprofile')
+    }
     return (
         <div>
             <div className="Header">
@@ -82,6 +99,11 @@ function RequestGroup ({groupPic, groupName, userData, tags, groupDescription}) 
                 <div>
                     <button className="request-button">REQUEST TO JOIN</button>
                 </div>
+            </div>
+            <div className="Footer">
+                <img src={chatImg} alt='' className="footer-photo" onClick={handleChatClick}/>
+                <img src={classesImg} alt='' className="footer-photo" onClick={handleClassesClick}/>
+                <img src={profileImg} alt='' className="footer-photo" onClick={handleProfileClick}/>
             </div>
         </div>
     );

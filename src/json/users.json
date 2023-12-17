@@ -27,7 +27,13 @@
     "email": "example",
     "password": "secure",
     "phoneNumber": "1234",
-    "id": 2
+    "id": 2,
+    "major": "Applied Math",
+    "minor": "Music",
+    "bio": "I love math",
+    "tags": [
+      "group learner"
+    ]
   },
   {
     "name": "Yelena",

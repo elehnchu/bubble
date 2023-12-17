@@ -93,6 +93,7 @@ def login():
         user = user = next((user for user in users if user['email'] == email and user['password'] == password), None)
 
         if user:
+            print(user)
             return jsonify(user)
         else:
             return jsonify({"message": "User not found"}), 404
