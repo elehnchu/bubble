@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import Back_arrow from "../images/Backward arrow.png";
 
 function SignUp () {
+    const navigate = useNavigate();
     const [inputs, setInputs] = useState({
         name: '',
         email: '',
@@ -33,15 +34,16 @@ function SignUp () {
             [name]: value
         });
     };
-    const navigate = useNavigate();
     const handleBackClick = () => {
         navigate('/')
     }
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        handleRegister();
+        handleRegister()
+        navigate('/')
     }
+
     return (
         <div className='background'>
             <div className = 'signup-container'>
