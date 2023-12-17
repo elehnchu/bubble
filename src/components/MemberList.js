@@ -1,44 +1,63 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import { StreamChat } from 'stream-chat';
-import 'stream-chat-react/dist/css/index.css';
+import { useLocation, useNavigate } from 'react-router-dom';
+import usersData from '../json/users.json';
+import BackArrowImage from '../images/Backward arrow.png';
+import './MembersList.css';
+import classesImg from '../images/footer_classes.png'
+import profileImg from '../images/footer_profile.png'
+import chatImg from '../images/footer_chat.png'
 
-const MemberListPage = () => {
-    const location = useLocation();
-    const members = Object.keys(location.state.members_dict)
+const MemberList = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const memberIDs = location.state ? Object.keys(location.state.members_dict) : [];
+  const [membersInfo, setMembersInfo] = useState([]);
 
-    return (
-        <div>YOU REACHED MEMBERS LIST {members}</div>
-    );
+  useEffect(() => {
+    const matchedMembers = usersData.filter(user => memberIDs.includes(String(user.id)));
+    setMembersInfo(matchedMembers);
+  }, [memberIDs]);
 
-//   const client = StreamChat.getInstance(process.env.REACT_APP_STREAM_API_KEY);
+  const handleBackClick = () => {
+    navigate(-1);
+  };
 
-//   useEffect(() => {
-//     const fetchMembers = async () => {
-//       const channel = client.channel('messaging', channelId);
-//       const response = await channel.queryMembers({});
-//       setMembers(response.members);
-//     };
+  const handleChatClick = () => {
+    navigate('/channellist') // fix later
+  }
 
-//     fetchMembers();
-//   }, [channelId, client]);
+  const handleClassesClick = () => {
+    navigate('/courses') // fix later
+  }
 
-//   return (
-//     <div className="member-list-container">
-//       <div className="member-list-header">Participants</div>
-//       <ul className="member-list">
-//         {members.map((member) => (
-//           <li key={member.user.id} className="member-item">
-//             <img src={member.user.image} alt={member.user.name} className="member-image" />
-//             <div className="member-info">
-//               <div className="member-name">{member.user.name}</div>
-//               <div className="member-status">{member.user.online ? 'online' : 'offline'}</div>
-//             </div>
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
+  const handleProfileClick = () => {
+    navigate('/yourprofile')
+  }
+
+  return (
+    <>
+      <div className="Header">
+        <img src={BackArrowImage} alt="Back" className="Back-arrow" onClick={handleBackClick} />
+        {/* Rest of the header content */}
+      </div>
+      <div className="member-list-container">
+        {membersInfo.map(member => (
+          <div key={member.id} className="member-item">
+            <img src={member.profilePicUrl} alt={member.name} className="member-image" />
+            <div className="member-info">
+              <div className="member-name">{member.name}</div>
+              <div className="member-status">{member.email}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="Footer">
+        <img src={chatImg} alt='' className="footer-photo" onClick={handleChatClick}/>
+        <img src={classesImg} alt='' className="footer-photo" onClick={handleClassesClick}/>
+        <img src={profileImg} alt='' className="footer-photo" onClick={handleProfileClick}/>
+      </div>
+    </>
+  );
 };
 
-export default MemberListPage;
+export default MemberList;

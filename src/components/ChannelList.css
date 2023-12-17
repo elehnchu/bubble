@@ -25,6 +25,39 @@
     z-index: 10;
 }
 
+
+.Footer{
+    background-color: #70CDD7;
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 25px;
+    color: white;
+    z-index: 100;
+  }
+  
+  .footer-photo {
+    margin-left: 17px;
+    margin-right: 17px;
+    margin-top: 5px;
+    height: 58px;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
 /*@media screen { 
     .str-chat {
         display: flex;
