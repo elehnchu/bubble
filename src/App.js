@@ -37,6 +37,7 @@ function App() {
           <Route path="/channellist" element={<ChannelList />} /> {/* Add route for channel list */}
         </Routes>
         <div className="Footer"></div>
+          
       </div>
     </Router>
   );
