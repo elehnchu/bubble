@@ -78,6 +78,28 @@ def add_group():
     print(groups)
     return jsonify(new_group), 201
 
+@app.route('/login', methods=['POST'])
+def login():
+    try:
+        data = request.get_json()
+
+        if 'email' not in data or 'password' not in data:
+            return jsonify({"message": "Email and password is required"}), 400
+        
+        email = data['email']
+        password = data['password']
+
+        users = load_data(users_file_path)
+        user = user = next((user for user in users if user['email'] == email and user['password'] == password), None)
+
+        if user:
+            return jsonify(user)
+        else:
+            return jsonify({"message": "User not found"}), 404
+    except Exception as e:
+        print(str(e))
+        return jsonify({"message": "Internal Server Error"}), 500
+
 @app.route('/stream-token', methods=['POST'])
 def get_stream_token():
     user_data = request.json
