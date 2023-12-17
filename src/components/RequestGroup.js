@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from "react";
-import {useParams} from 'react-router-dom'
+import {useNavigate, useParams} from 'react-router-dom';
 import back from "../images/arrow.png";
-import groupImg from "../images/group.jpeg"
-import userImg from "../images/user.jpeg"
-import './RequestGroup.css'
+import Back_arrow from "../images/Backward arrow.png";
+import groupImg from "../images/group.jpeg";
+import userImg from "../images/user.jpeg";
+import './RequestGroup.css';
 
 function RequestGroups({}) {
     const { groupId } = useParams();
@@ -49,13 +50,15 @@ function RequestGroups({}) {
 export default RequestGroups;
 
 function RequestGroup ({groupPic, groupName, userData, tags, groupDescription}) {
+    const navigate = useNavigate();
+
+  const handleBackClick = () => {
+      navigate('/groupsearch')
+  }
     return (
         <div>
-            <div className="group-header">
-                <div className="back">
-                    <button className="back-button">
-                        <img className = "back-arrow" src={back} alt="back arrow"></img>
-                    </button>
+            <div className="Header">
+                <div style={{ backgroundImage:`url(${Back_arrow})` }}className = "Back-arrow" onClick={handleBackClick}>
                 </div>
             </div>
             <div className="Content">

@@ -24,7 +24,8 @@ function App() {
       <UserProvider>
         <div className="App">
           <Routes>
-            <Route path="/" element={<GroupSearch />} />
+            <Route path="/" element={<Login />} />
+            <Route path="/groupsearch" element={<GroupSearch />} />
             <Route path="/userprofile" element={<UserProfile />} />
             <Route path="/yourprofile" element={<YourProfile />} />
             <Route path="/requestgroup/:groupId" element={<RequestGroup />} />
@@ -34,7 +35,6 @@ function App() {
             <Route path="/courses" element={<Courses />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/likedprofiles" element={<LikedProfiles />} />
-            <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/chatsearch/:channelId" element={<ChatSearch />} /> {/* Add route for chat search */}
             <Route path="/channellist" element={<ChannelList />} /> {/* Add route for channel list */}

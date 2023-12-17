@@ -32,7 +32,7 @@ function Login () {
             const userData = await response.json();
 
             dispatch({type: 'SET_USER', payload: userData });
-            navigate('/yourprofile')
+            navigate('/nobubblefound')
         } catch (error) {
             console.error('Error during login:', error);
         }

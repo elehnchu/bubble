@@ -8,12 +8,17 @@ import PPI from "../images/Privacy PPolicy Icon.png"
 import HI from "../images/Help Icon.png"
 import Back_arrow from "../images/Backward arrow.png"
 import Right_arrow from "../images/right_arrow.png"
+import { useNavigate } from 'react-router-dom';
 
 function Settings(){
+    const navigate = useNavigate();
+    const handleBackClick = () => {
+        navigate('/yourprofile')
+    }
     return (
         <div className="settings_Header">
             <div className ="Header-settings">
-                    <div style={{ backgroundImage:`url(${Back_arrow})` }}className = "Back-arrow">
+                    <div style={{ backgroundImage:`url(${Back_arrow})` }}className = "Back-arrow" onClick={handleBackClick}>
                     </div>
                     <div className ="Header-settings-title">
                         Settings
@@ -46,8 +51,15 @@ function Settings(){
 export default Settings;
 
 function ListItem({icon_image, Title}) {
+    const navigate = useNavigate();
+    const handleClick = () => {
+        if (Title == "Liked Profiles") {
+            navigate('/likedprofiles')
+        }
+    }
+
     return (
-      <div className="list-item-settings">
+      <div className="list-item-settings" onClick={handleClick}>
             <div style={{ backgroundImage:`url(${icon_image})` }}className = "icon-image">
                     </div>
             <div className="list-item-settings-name">

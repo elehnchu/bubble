@@ -3,24 +3,33 @@ import { useUser } from './UserContext';
 import './YourProfile.css';
 import DefaultProfile from '../assets/profile-photos/default.png'
 import BackButtonImage from '../images/arrow.png'
+import Back_arrow from "../images/Backward arrow.png"
 import GearImage from '../images/setting.png'
 import PencilImage from '../images/edit.png'
+import { useNavigate } from 'react-router-dom';
 
 const YourProfile = () => {
   const { state, dispatch } = useUser();
   const { user } = state;
+  const navigate = useNavigate();
+
+  const handleClickSettings = () => {
+    navigate('/settings')
+  }
+  const handleBackClick = () => {
+      navigate('/nobubblefound')
+  }
 
   return (
     <>
     <div className="Header">
-        <div className="back">
-            <button className="back-button">
-                <img className = "back-arrow" src={BackButtonImage} alt="back arrow"></img>
-            </button>
+        <div style={{ backgroundImage:`url(${Back_arrow})` }}className = "Back-arrow" onClick={handleBackClick}>
         </div>
-        Profile
+        <div className ="Header-settings-title">
+          Profile
+        </div>
         <div className="gear">
-            <button className="gear-button">
+            <button className="gear-button" onClick={handleClickSettings}>
                 <img className = "gear-img" src={GearImage} alt="gear"></img>
             </button>
         </div>
@@ -43,7 +52,7 @@ const YourProfile = () => {
           <div className="tag">{user ? user.minor : ""}</div>
         </div>
         <div className="detail-title">About Me:</div>
-        <p className="about-me-text">{user.bio}</p>
+        <p className="about-me-text">{user ? user.bio : ""}</p>
       </div>
     </div>
     </>

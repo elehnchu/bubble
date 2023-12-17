@@ -1,8 +1,11 @@
 import './CreateGroup.css';
 import React from "react";
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function CreateGroup(){
+
+    const navigate = useNavigate();
     const [inputs, setInputs] = useState({
         name: '',
         maxNoMembers: 1,
@@ -33,9 +36,14 @@ function CreateGroup(){
         });
     };
 
+    const handleNavigate = () => {
+        navigate('/bubblecreated')
+    }
+
     const handleSubmit = (event) => {
         event.preventDefault();
         handleCreate();
+        handleNavigate();
     }
     return (
         <div>
