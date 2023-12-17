@@ -51,6 +51,10 @@ function Login () {
         handleLogin();
         console.log('Login data submitted:', inputs)
     }
+    
+    const handleNewUserClick = () => {
+        navigate('/signup')
+    }
     return (
         <div className='background'>
             <div className='title'>bubble</div>
@@ -65,7 +69,7 @@ function Login () {
                     <br></br>
                     <input className="form-submit" type="submit" value="LOGIN"></input>
                 </form>
-                <button className="new-user">NEW USER</button>
+                <button className="new-user" onClick={handleNewUserClick} >NEW USER</button>
             </div>
         </div>
     );

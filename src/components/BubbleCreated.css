@@ -3,3 +3,38 @@
     padding-top: 50px;
     padding-bottom: 30px;
 }
+
+.Back-arrow {
+    height: 20px;
+    width: 20px;
+    background-size: contain;
+    float: left;
+    margin-top: 35px;
+    margin-left: 20px;
+  
+  }
+  
+  .Header{
+    background-color: #6DCFD9;
+    min-height: 40px;
+    width: 100%;
+    height: 90px;
+    margin-bottom: 1000px;
+    margin: 0;
+    padding: 0;
+    line-height: 90px;
+    float: left;
+    align-self: center;
+    display: center;
+    overflow: hidden;
+}
+
+.Header-create-bubble-title{
+  height: 100px;
+  width: 70%;
+  padding-right: 60px;
+  float: right;
+  font-size: 30px;
+  color: white;
+  font-weight: light bold;
+}

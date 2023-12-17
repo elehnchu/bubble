@@ -36,16 +36,16 @@ export default LikedProfiles;
 
 function ListItem({ Uimage, userName, description, email }) {
     return (
-        <div className="list-item-container">
+        <div className="list-item-container-liked">
 
-        <div className="list-item-row"> 
+        <div className="list-item-row-liked"> 
             <div className = "icon-userimage"></div>
             <div className ="user-container">
                 <div className="list-item-user-name">{userName}</div>
                 <div className="list-item-email">{email}
                 </div>
             </div>
-            <div className ="list-item-description">{description}
+            <div className ="list-item-description-liked">{description}
             </div>
       </div>
     </div>

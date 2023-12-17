@@ -1,7 +1,9 @@
 import './SignIn.css'
 import React from "react";
 import { useState, useEffect } from 'react';
-import homeFish from '../images/home-fish.png'
+import homeFish from '../images/home-fish.png';
+import { useNavigate } from 'react-router-dom';
+import Back_arrow from "../images/Backward arrow.png";
 
 function SignUp () {
     const [inputs, setInputs] = useState({
@@ -31,6 +33,10 @@ function SignUp () {
             [name]: value
         });
     };
+    const navigate = useNavigate();
+    const handleBackClick = () => {
+        navigate('/')
+    }
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -38,7 +44,11 @@ function SignUp () {
     }
     return (
         <div className='background'>
-            <div className='title'>bubble</div>
+            <div className = 'signup-container'>
+                <div style={{ backgroundImage:`url(${Back_arrow})` }}className = "Back-arrow-signup" onClick={handleBackClick}>
+                    </div>
+                <div className='title'>bubble</div>
+            </div>
             <img className='home-image' src={homeFish} alt='fishes'></img>
             <div className='form'>
             <form onSubmit={handleSubmit}>

@@ -31,6 +31,7 @@ function GroupSearch(){
                 <ListItem  index={2} image={lionImg} groupName="Group 2" description= "58% match" memberNum= "Members:  3 of 5"></ListItem>
                 <ListItem  index={3} image={lionImg} groupName="Group 3" description= "25% match" memberNum= "Members:  5 of 8"></ListItem>
                 <ListItem  index={4} image={lionImg} groupName="Group 4" description= "15% match" memberNum= "Members:  3 of 10"></ListItem>
+               
             </div>
             <button class= "Add-button" onClick={handleClick}>
                 +

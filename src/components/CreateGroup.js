@@ -2,6 +2,7 @@ import './CreateGroup.css';
 import React from "react";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Back_arrow from "../images/Backward arrow.png"
 
 function CreateGroup(){
 
@@ -39,7 +40,9 @@ function CreateGroup(){
     const handleNavigate = () => {
         navigate('/bubblecreated')
     }
-
+    const handleBackClick = () => {
+        navigate('/groupsearch')
+    }
     const handleSubmit = (event) => {
         event.preventDefault();
         handleCreate();
@@ -47,8 +50,14 @@ function CreateGroup(){
     }
     return (
         <div>
-            <div className="Header">Create Bubble</div>
-            <div className="form">
+            <div className="Header">
+            <div style={{ backgroundImage:`url(${Back_arrow})` }}className = "Back-arrow" onClick={handleBackClick}>
+                    </div>
+                    <div className ="Header-create-title">
+                        Create Bubble
+                    </div>
+            </div>
+            <div className="form_create_bubble">
                 <form onSubmit={ handleSubmit }>
                     <label id="first-label" className="label" for="name">Group Name</label><br></br>
                     <input className="form-input" type="text" id="name" name="name" value={inputs.name} onChange={handleChange}></input>

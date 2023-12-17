@@ -37,11 +37,11 @@
   font-weight: light bold;
 }
 
-.list-item-container{
+.list-item-container-liked{
     overflow: scroll;
 }
 
-  .list-item-row{
+  .list-item-row-liked{
     align-self: center;
     flex-direction: row;
     margin-top: 3px;
@@ -92,7 +92,7 @@
     font-weight: lighter bold;
   }
   
-  .list-item-description {
+  .list-item-description-liked {
     height: 40px;
     width: 80px;
     float: right;

@@ -4,11 +4,25 @@ import './UserProfile.css';
 import './Star.css';
 import Star from '../images/star.jpg'
 import DefaultProfile from '../assets/profile-photos/default.png'
+import { useNavigate } from 'react-router-dom';
+import Back_arrow from "../images/Backward arrow.png"
+
+//el: not sure if this would back to /memberlist, it's not developed atm, so 
+//temp nav is login
 
 const UserProfile = () => {
+
+  const navigate = useNavigate();
+    const handleBackClick = () => {
+        navigate('/')
+    }
+
   return (
     <>
-    <div className="Header"></div>
+    <div className="Header_user_info">
+      <div style={{ backgroundImage:`url(${Back_arrow})` }}className = "Back-arrow" onClick={handleBackClick}>
+        </div>
+        </div>
     <div className="user-profile">
         <img src={DefaultProfile} alt='' className="profile-photo" />
         <img src={Star} alt='' />

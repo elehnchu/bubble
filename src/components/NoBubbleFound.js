@@ -12,10 +12,16 @@ function NoBubbleFound () {
     }
     return (
         <div>
-            <div className="Header">Bubbles</div>
+            <div className="Header">
+                    <div className ="Header-nobubble-title">
+                        Bubbles
+                    </div>
+            </div>
+            <div className = "bubble-container">
             <div className="title1">No Bubbles Found...</div>
             <img className="fish-pic" src={fish} alt="fish"></img>
             <button className="request-button" onClick={handleClick}>LOOK FOR A BUBBLE</button>
+            </div>
         </div>
     );
 }
