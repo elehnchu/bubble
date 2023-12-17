@@ -3,6 +3,9 @@ import React from "react";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Back_arrow from "../images/Backward arrow.png"
+import classesImg from '../images/footer_classes.png'
+import profileImg from '../images/footer_profile.png'
+import chatImg from '../images/footer_chat.png'
 
 function CreateGroup(){
 
@@ -15,6 +18,17 @@ function CreateGroup(){
         modality: '',
         bio: ''
     });
+    const handleChatClick = () => {
+        navigate('/channellist') // fix later
+      }
+    
+      const handleClassesClick = () => {
+        navigate('/courses') // fix later
+      }
+    
+      const handleProfileClick = () => {
+        navigate('/yourprofile')
+      }
 
     const handleCreate = () => {
         fetch('http://127.0.0.1:5000/groups', {
@@ -90,6 +104,11 @@ function CreateGroup(){
                     <textarea className="bio-input" id="bio" name="bio" rows="3" cols="36" value={inputs.bio} onChange={handleChange}></textarea><br></br>
                     <input className="form-submit" type="submit" value="CREATE"></input>
                 </form>
+            </div>
+            <div className="Footer">
+                <img src={chatImg} alt='' className="footer-photo" onClick={handleChatClick}/>
+                <img src={classesImg} alt='' className="footer-photo" onClick={handleClassesClick}/>
+                <img src={profileImg} alt='' className="footer-photo" onClick={handleProfileClick}/>
             </div>
         </div>
     );

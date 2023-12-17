@@ -8,6 +8,9 @@ import bubble_purple from "../images/Bubble_purple.png"
 import bubble_green from "../images/Bubble_green.png"
 import bubble_beige from "../images/Bubble_beige.png"
 import Back_arrow from "../images/Backward arrow.png"
+import classesImg from '../images/footer_classes.png'
+import profileImg from '../images/footer_profile.png'
+import chatImg from '../images/footer_chat.png'
 
 
 function Courses(){
@@ -15,6 +18,17 @@ function Courses(){
     const handleBackClick = () => {
         navigate('/nobubblefound')
     }
+    const handleChatClick = () => {
+        navigate('/channellist') // fix later
+      }
+    
+      const handleClassesClick = () => {
+        navigate('/courses') // fix later
+      }
+    
+      const handleProfileClick = () => {
+        navigate('/yourprofile')
+      }
     return (
         <div className="Courses_Header">
                 <div className ="Header-courses">
@@ -39,6 +53,11 @@ function Courses(){
                 <img className="fish-pic2" src={fishsmall}></img>
                 <img className="fish-pic3" src={fishsmall}></img>
                 <img className="fish-pic4" src={fishImg}></img>
+            </div>
+            <div className="Footer">
+                <img src={chatImg} alt='' className="footer-photo" onClick={handleChatClick}/>
+                <img src={classesImg} alt='' className="footer-photo" onClick={handleClassesClick}/>
+                <img src={profileImg} alt='' className="footer-photo" onClick={handleProfileClick}/>
             </div>
             
         </div>

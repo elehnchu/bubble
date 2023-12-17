@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 import { useUser } from './UserContext';
 import './YourProfile.css';
 import DefaultProfile from '../assets/profile-photos/default.png'
+import classesImg from '../images/footer_classes.png'
+import profileImg from '../images/footer_profile.png'
+import chatImg from '../images/footer_chat.png'
 import BackButtonImage from '../images/arrow.png'
 import Back_arrow from "../images/Backward arrow.png"
 import GearImage from '../images/setting.png'
@@ -20,6 +23,23 @@ const YourProfile = () => {
       navigate('/nobubblefound')
   }
 
+  const handleEditClick = () => {
+    navigate('/aboutme')
+  }
+
+
+  const handleChatClick = () => {
+    navigate('/channellist') // fix later
+  }
+
+  const handleClassesClick = () => {
+    navigate('/courses') // fix later
+  }
+
+  const handleProfileClick = () => {
+    navigate('/yourprofile')
+  }
+
   return (
     <>
     <div className="Header">
@@ -36,7 +56,7 @@ const YourProfile = () => {
     </div>
     <div className="your-profile">
       <img src={DefaultProfile} alt='' className="profile-photo" />
-      <img src={PencilImage} alt="Pencil" className="pencil" />
+      <img src={PencilImage} alt="Pencil" className="pencil" onClick={handleEditClick}/>
       <h1 className="user-text">{user ? user.name : "You"}</h1>
       <p className="email-text">{user ? user.email : "abc123@email.com"}</p>
       <div className="detail-content">
@@ -54,6 +74,11 @@ const YourProfile = () => {
         <div className="detail-title">About Me:</div>
         <p className="about-me-text">{user ? user.bio : ""}</p>
       </div>
+    </div>
+    <div className="Footer">
+        <img src={chatImg} alt='' className="footer-photo" onClick={handleChatClick}/>
+        <img src={classesImg} alt='' className="footer-photo" onClick={handleClassesClick}/>
+        <img src={profileImg} alt='' className="footer-photo" onClick={handleProfileClick}/>
     </div>
     </>
   );

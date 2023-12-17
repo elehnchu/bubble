@@ -48,7 +48,6 @@ function App() {
             <Route path="/channellist" element={<ChannelList />} />
             <Route path="/memberlist" element={<MemberList />} />
           </Routes>
-          <div className="Footer"></div>
         </div>
       </UserProvider>
     </Router>

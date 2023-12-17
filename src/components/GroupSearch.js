@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import lionImg from "../images/lion.jpg"
 import Back_arrow from "../images/Backward arrow.png"
 import React from "react";
+import classesImg from '../images/footer_classes.png'
+import profileImg from '../images/footer_profile.png'
+import chatImg from '../images/footer_chat.png'
 
 function GroupSearch(){
 
@@ -13,6 +16,17 @@ function GroupSearch(){
 
     const handleClick = () => {
       navigate('/creategroup')
+    }
+    const handleChatClick = () => {
+      navigate('/channellist') // fix later
+    }
+  
+    const handleClassesClick = () => {
+      navigate('/courses') // fix later
+    }
+  
+    const handleProfileClick = () => {
+      navigate('/yourprofile')
     }
     return (
         <div className="Bubble_Header">
@@ -36,6 +50,11 @@ function GroupSearch(){
             <button class= "Add-button" onClick={handleClick}>
                 +
             </button>
+            <div className="Footer">
+                <img src={chatImg} alt='' className="footer-photo" onClick={handleChatClick}/>
+                <img src={classesImg} alt='' className="footer-photo" onClick={handleClassesClick}/>
+                <img src={profileImg} alt='' className="footer-photo" onClick={handleProfileClick}/>
+            </div>
 
         </div>
     );
