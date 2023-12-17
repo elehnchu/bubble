@@ -4,13 +4,26 @@ import { useState } from 'react';
 
 function CreateGroup(){
     const [inputs, setInputs] = useState({
-        gname: '',
-        members: 1,
-        freq: 1,
+        name: '',
+        maxNoMembers: 1,
+        meetFreq: 1,
         purpose: '',
         modality: '',
         bio: ''
     });
+
+    const handleCreate = () => {
+        fetch('http://127.0.0.1:5000/groups', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(inputs)
+        })
+        .then(response => response.json())
+        .then(data => console.log('Group created:', data))
+        .catch(error => console.error('Error creating group:', error))
+    }
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -22,24 +35,24 @@ function CreateGroup(){
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log('Form data submitted:', inputs)
+        handleCreate();
     }
     return (
         <div>
             <div class="Header">Create Bubble</div>
             <div class="form">
-                <form onSubmit={handleSubmit}>
-                    <label id="first-label" class="label" for="gname">Group Name</label><br></br>
-                    <input class="form-input" type="text" id="gname" name="gname" value={inputs.gname} onChange={handleChange}></input>
+                <form onSubmit={ handleSubmit }>
+                    <label id="first-label" class="label" for="name">Group Name</label><br></br>
+                    <input class="form-input" type="text" id="name" name="name" value={inputs.name} onChange={handleChange}></input>
                     <br></br>
-                    <label class="label" for="members">Members</label><br></br>
-                    <select class="form-select1" name="members" id="members" value={inputs.members} onChange={handleChange}>
+                    <label class="label" for="maxNoMembers">Members</label><br></br>
+                    <select class="form-select1" name="maxNoMembers" id="maxNoMembers" value={inputs.maxNoMembers} onChange={handleChange}>
                         {[1, 2, 3, 4].map((number) => (
                             <option key={number} value={number}>{number}</option>
                         ))}
                     </select><br></br>
-                    <label class="label" for="freq">Meet how often? (per/wk)</label><br></br>
-                    <select class="form-select1" name="freq" id="freq" value={inputs.freq} onChange={handleChange}>
+                    <label class="label" for="meetFreq">Meet how often? (per/wk)</label><br></br>
+                    <select class="form-select1" name="meetFreq" id="freq" value={inputs.meetFreq} onChange={handleChange}>
                         {[1, 2, 3].map((number) => (
                             <option key={number} value={number}>{number}</option>
                         ))}

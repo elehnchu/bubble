@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css'
 import GroupSearch from './components/GroupSearch';
 import UserProfile from './components/UserProfile';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import YourProfile from './components/YourProfile';
 import RequestGroup from './components/RequestGroup';
 import CreateGroup from './components/CreateGroup';
@@ -18,13 +19,13 @@ import ChannelList from './components/ChannelList'; // Import the ChannelList co
 
 function App() {
   return (
-    <Router basename="/" hashType="noslash">
+    <Router>
       <div className="App">
         <Routes>
           <Route path="/" element={<GroupSearch />} />
           <Route path="/userprofile" element={<UserProfile />} />
           <Route path="/yourprofile" element={<YourProfile />} />
-          <Route path="/requestgroup" element={<RequestGroup />} />
+          <Route path="/requestgroup/:groupId" element={<RequestGroup />} />
           <Route path="/creategroup" element={<CreateGroup />} />
           <Route path="/bubblecreated" element={<BubbleCreated />} />
           <Route path="/nobubblefound" element={<NoBubbleFound />} />
