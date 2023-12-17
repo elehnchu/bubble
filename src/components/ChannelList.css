@@ -1,0 +1,51 @@
+
+.str-chat__input-flat {
+    padding-bottom: 90px !important;
+    z-index: 10px;
+  }
+
+.str-chat__channel-list {
+    background-color: #70CDD7 !important;
+}
+
+.users-list {
+    background: #ffffff;
+    padding: 20px;
+    padding-left: 30px;
+    border-radius: calc(16px / 2) 16px 0 0;
+    border: 1px solid #ecebeb;
+}
+
+/*@media screen { 
+    .str-chat {
+        display: flex;
+        position: relative;
+        z-index: 1000000; 
+        width: 300px;
+        transform: translate(417px);
+        background-color: transparent !important;
+    }
+
+    .str-chat__list {
+        position: relative;
+        z-index: 12; 
+        width: 100vw;
+        transform: translate(217px);
+        background-color: transparent !important;
+
+*/
+
+
+
+/* .IMBABY {
+    transform: translate(417px);
+} */
+
+/* .str-chat {
+    display: flex;
+    position: relative;
+    z-index: 10; 
+    width: 300px;
+    transform: translate(417px);
+    background-color: transparent !important;
+} */

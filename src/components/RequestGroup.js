@@ -1,40 +1,64 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import {useNavigate, useParams} from 'react-router-dom';
 import back from "../images/arrow.png";
-import groupImg from "../images/group.jpeg"
-import userImg from "../images/user.jpeg"
-import './RequestGroup.css'
+import Back_arrow from "../images/Backward arrow.png";
+import groupImg from "../images/group.jpeg";
+import userImg from "../images/user.jpeg";
+import './RequestGroup.css';
 
-function RequestGroups() {
-    const userData = [
-        {
-            name:"User 1", 
-            image:userImg,
-        }, 
-        {
-            name:"User 2", 
-            image:userImg,
-        }];
+function RequestGroups({}) {
+    const { groupId } = useParams();
+    const [group, setGroup] = useState(null);
+    const [users, setUsers] = useState([])
 
-    const tags = ["night owl", "group learner", "coffee lover"];
-    const groupDescription = 
-        `- Meet every Wednesday at 9pm 
-         - Virtual ONLY
-         - Seeking 1 more member`
+    useEffect(() => {
+        fetch(`http://127.0.0.1:5000/groups/${groupId}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Study group not found');
+            }
+            return response.json();
+        })
+        .then(data => setGroup(data))
+        .catch(error => console.error('Error fetching study group:', error));
+
+        const fetchUsers = async () => {
+            try {
+                const promises = group?.users.map(async (id) => {
+                    const response = await fetch(`http://127.0.0.1:5000/users/${id}`);
+                    const user = await response.json();
+                    return user;
+                });
+
+                const userList = await Promise.all(promises);
+                setUsers(userList);
+            } catch (error) {
+                console.error('Error fetching users:', error);
+            }
+        };
+        fetchUsers();
+    }, [groupId, group?.users])
+
+    const tags = group ? (group.tags ? group.tags : []) : [];
+    const groupDescription = group ? group.bio : '';
+    const groupName = group ? group.name : '';
     return (
-        <RequestGroup groupPic={groupImg} groupName="Group 1" userData={userData} tags={tags} groupDescription={groupDescription}></RequestGroup>
+        <RequestGroup groupPic={groupImg} groupName={groupName} userData={users} tags={tags} groupDescription={groupDescription}></RequestGroup>
     );
 };
  
 export default RequestGroups;
 
 function RequestGroup ({groupPic, groupName, userData, tags, groupDescription}) {
+    const navigate = useNavigate();
+
+  const handleBackClick = () => {
+      navigate('/groupsearch')
+  }
     return (
         <div>
-            <div className="group-header">
-                <div className="back">
-                    <button className="back-button">
-                        <img className = "back-arrow" src={back} alt="back arrow"></img>
-                    </button>
+            <div className="Header">
+                <div style={{ backgroundImage:`url(${Back_arrow})` }}className = "Back-arrow" onClick={handleBackClick}>
                 </div>
             </div>
             <div className="Content">
@@ -43,7 +67,7 @@ function RequestGroup ({groupPic, groupName, userData, tags, groupDescription}) 
                 <div className="group-members">
                     {userData.map((user) => (
                         <div className="group-users">
-                            <img className="profile-pic" src={user.image} alt="profile"></img><div className="user-name">{user.name}</div>
+                            <img className="profile-pic" src={userImg} alt="profile"></img><div className="user-name">{user.name}</div>
                         </div>
                     ))}
                 </div>

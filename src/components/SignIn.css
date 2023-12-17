@@ -23,7 +23,9 @@
 }
 
 .form-input {
-    padding-left: 12px;
+    padding: 7px;
+    margin: 10px;
+    width: 248.5px;
 }
 
 #password {

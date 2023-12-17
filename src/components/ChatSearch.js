@@ -14,9 +14,9 @@ const ChatSearch = () => {
     client.devToken('5'.toString())
   );
 
-  const channel = client.channel('messaging', channelId, {
-    members: ['1', '5'], // Replace with actual user IDs
-    name: 'COMS4170'
+  const channel = client.channel('messaging', 'channel1', {
+    members: ['1', '2', '5'], // Replace with actual user IDs
+    name: 'STAT2102'
     // other channel data...
   });
 

@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "name": "Test",
+    "admin": 1,
+    "maxNoMembers": 2,
+    "meetFrequency": 2,
+    "purpose": "Test",
+    "modality": "Test",
+    "bio": "Test",
+    "users": [
+      1,
+      2
+    ],
+    "tags": [
+      "night owl",
+      "group learner",
+      "coffee lover"
+    ]
+  },
+  {
+    "name": "",
+    "maxNoMembers": 1,
+    "meetFreq": 1,
+    "purpose": "",
+    "modality": "",
+    "bio": "Test",
+    "tags": [],
+    "id": 2
+  },
+  {
+    "name": "UI Design",
+    "maxNoMembers": "3",
+    "meetFreq": "2",
+    "purpose": "General Studying",
+    "modality": "In-person",
+    "bio": "Study for UI Design",
+    "gname": "s",
+    "members": "3",
+    "id": 3
+  },
+  {
+    "name": "UI Design 2",
+    "maxNoMembers": "4",
+    "meetFreq": "2",
+    "purpose": "Homework Help",
+    "modality": "Hybrid",
+    "bio": "Study for UI Design 2",
+    "gname": "s",
+    "members": "3",
+    "id": 4
+  },
+  {
+    "name": "",
+    "maxNoMembers": 1,
+    "meetFreq": 1,
+    "purpose": "",
+    "modality": "",
+    "bio": "",
+    "id": 5
+  },
+  {
+    "name": "",
+    "maxNoMembers": 1,
+    "meetFreq": 1,
+    "purpose": "",
+    "modality": "",
+    "bio": "",
+    "id": 6
+  },
+  {
+    "name": "",
+    "maxNoMembers": 1,
+    "meetFreq": 1,
+    "purpose": "",
+    "modality": "",
+    "bio": "",
+    "id": 7
+  }
+]

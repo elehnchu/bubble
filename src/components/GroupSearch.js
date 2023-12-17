@@ -1,13 +1,23 @@
 import './GroupSearch.css';
+import { useNavigate } from 'react-router-dom';
 import lionImg from "../images/lion.jpg"
 import Back_arrow from "../images/Backward arrow.png"
 import React from "react";
 
 function GroupSearch(){
+
+    const navigate = useNavigate();
+    const handleBackClick = () => {
+        navigate('/courses')
+    }
+
+    const handleClick = () => {
+      navigate('/creategroup')
+    }
     return (
         <div className="Bubble_Header">
             <div className ="Header_group_title">
-                    <div style={{ backgroundImage:`url(${Back_arrow})` }}className = "Back-arrow">
+                    <div style={{ backgroundImage:`url(${Back_arrow})` }}className = "Back-arrow" onClick={handleBackClick}>
                     </div>
                     <div className ="Header-groupsel-title">
                         COMS 4170
@@ -22,7 +32,7 @@ function GroupSearch(){
                 <ListItem  index={3} image={lionImg} groupName="Group 3" description= "25% match" memberNum= "Members:  5 of 8"></ListItem>
                 <ListItem  index={4} image={lionImg} groupName="Group 4" description= "15% match" memberNum= "Members:  3 of 10"></ListItem>
             </div>
-            <button class= "Add-button">
+            <button class= "Add-button" onClick={handleClick}>
                 +
             </button>
 
@@ -33,9 +43,15 @@ function GroupSearch(){
 export default GroupSearch;
 
 function ListItem({ image, groupName, description, memberNum }) {
+
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+      navigate('/requestgroup/1')
+    }
     return (
       <div className = "list-item-container">
-      <div className="list-item">
+      <div className="list-item" onClick={handleClick}>
         <div className="list-item-icons">
           <img src={image} alt="Group Icon" className="profile-image" />
         </div>
