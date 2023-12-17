@@ -1,0 +1,33 @@
+@media screen { 
+    .str-chat {
+        /* display: flex; */
+        position: relative;
+        z-index: 1000000; 
+        width: 300px;
+        transform: translate(417px);
+        background-color: transparent !important;
+    }
+
+    /* .str-chat__list {
+        position: relative;
+        z-index: 12; 
+        width: 100vw;
+        transform: translate(217px);
+        /* background-color: transparent !important; */
+
+}
+
+
+
+/* .IMBABY {
+    transform: translate(417px);
+} */
+
+/* .str-chat {
+    display: flex;
+    position: relative;
+    z-index: 10; 
+    width: 300px;
+    transform: translate(417px);
+    background-color: transparent !important;
+} */

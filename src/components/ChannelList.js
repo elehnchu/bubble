@@ -1,23 +1,51 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { StreamChat } from 'stream-chat';
+import { Chat, Channel, ChannelList, ChannelHeader, MessageList, InfiniteScroll, MessageInput, Thread, Window } from 'stream-chat-react';
+import { useNavigate } from 'react-router-dom';
+import 'stream-chat-react/dist/css/index.css';
+//import './ChannelList.css';
 
-const ChannelList = () => {
-  // Fetch and display a list of channels
+const ChannelListPage = () => {
+  // const client = StreamChat.getInstance(process.env.REACT_APP_STREAM_API_KEY);
+  //const navigate = useNavigate();
+
+  const filters = { members: { $in: ['5'] } }; // User ID '5'
+  const sort = { last_updated: -1 };
+  const options = { limit: 20, messages_limit: 20 };
+
+  const client = new StreamChat(process.env.REACT_APP_STREAM_API_KEY);
+  client.connectUser(
+    { id: '5', name: 'Test' },
+    client.devToken('5'.toString())
+  );
 
   return (
-    <div>
-      <h1>Channel List</h1>
-      <ul>
-        <li>
-          <Link to="/chatsearch/channel1">Channel 1</Link>
-        </li>
-        <li>
-          <Link to="/chatsearch/channel2">Channel 2</Link>
-        </li>
-        {/* Add more channel links as needed */}
-      </ul>
-    </div>
+    // <div className='IMBABY'>
+    <Chat client={client} >
+      <ChannelList
+          filters={filters}
+          sort={sort}
+          options={options}
+          Paginator={InfiniteScroll}
+          showChannelSearch
+      />
+      <div className='test'>
+        <Channel>
+          <Window>
+            <ChannelHeader />
+            <MessageInput />
+            <MessageList />
+            {/* <MessageInput /> */}
+          </Window>
+          <Thread />
+          
+        </Channel>
+      </div>
+    </Chat>
   );
 };
 
-export default ChannelList;
+export default ChannelListPage;
+
+
+
