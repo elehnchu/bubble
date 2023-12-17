@@ -24,6 +24,13 @@
     margin-left: 20px;
   }
 
+.sub-title {
+    color: #255155;
+    font-size: 20px;
+    opacity: .7;
+    font-weight: bold;
+}
+
 .form {
 }
 
@@ -58,7 +65,33 @@
     border: none;
 }
 
+.uni-image {
+    height: 210px;
+    padding-top: 70px;
+}
+
 .home-image {
     height: 150px;
     padding-top: 30px;
+}
+
+.footnote {
+    color: #7f7f7f;
+    font-size: 13px;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+#next-button {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: rgb(9, 127, 140);
+    color: white;
+    border-radius: 10px;
+    margin: 10px;
+    margin-bottom: 0px;
+    width: 35%;
+    height: 40px;
+    font-weight: bold;
+    border: none;
 }

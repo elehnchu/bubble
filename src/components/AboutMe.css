@@ -1,0 +1,17 @@
+.background {
+    color: #ceeaf7;
+}
+
+.edit-image {
+    margin: 10px;
+    height: 100px;
+}
+
+.sub-label {
+    color: #255155;
+    font-size: 10px;
+    font-weight: bold;
+    padding-left: 5%;
+    padding-right: 30%;
+    opacity: 0.7;
+}

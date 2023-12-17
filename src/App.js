@@ -15,7 +15,10 @@ import Settings from './components/Settings.js';
 import LikedProfiles from './components/LikedProfiles.js';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
+import AboutMe from './components/AboutMe.js';
 import ChatSearch from './components/ChatSearch';
+import ImportCourses from './components/ImportCourses.js';
+import RetrieveCourses from './components/RetrieveCourses.js';
 import ChannelList from './components/ChannelList';
 import MemberList from './components/MemberList';
 
@@ -38,6 +41,9 @@ function App() {
             <Route path="/settings" element={<Settings />} />
             <Route path="/likedprofiles" element={<LikedProfiles />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/retrievecourses" element={<RetrieveCourses />} />
+            <Route path="/importcourses" element={<ImportCourses />} />
+            <Route path="/aboutme" element={<AboutMe />} />
             <Route path="/chatsearch/:channelId" element={<ChatSearch />} />
             <Route path="/channellist" element={<ChannelList />} />
             <Route path="/memberlist" element={<MemberList />} />

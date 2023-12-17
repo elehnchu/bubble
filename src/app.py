@@ -99,6 +99,29 @@ def login():
     except Exception as e:
         print(str(e))
         return jsonify({"message": "Internal Server Error"}), 500
+    
+@app.route('/update-user-info', methods=['POST'])
+def update_user_info():
+    try:
+        data = request.get_json()
+        user_id = data.get('userId')
+        new_fields = {key: value for key, value in data.items() if key != 'userId'}
+
+        if user_id is None:
+            return jsonify({"message": "User identifier is required"}), 400
+        
+        users = load_data(users_file_path)
+        user = next((user for user in users if user['id'] == user_id), None)
+
+        if user:
+            user.update(new_fields)
+            save_data(users_file_path, users)
+            return jsonify({"message": "User information updated successfully"})
+        else:
+            return jsonify({"message": "User not found"}), 404
+    except Exception as e:
+        print(str(e))
+        return jsonify({"message": "Internal Server Error"}), 500
 
 @app.route('/stream-token', methods=['POST'])
 def get_stream_token():

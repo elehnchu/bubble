@@ -34,7 +34,14 @@
     "email": "example@email",
     "password": "secure1",
     "phoneNumber": "1234567890",
-    "id": 3
+    "id": 3,
+    "major": "Computer Science",
+    "minor": "Math",
+    "bio": "bio",
+    "tags": [
+      "math lover",
+      "night owl"
+    ]
   },
   {
     "name": "Lara",
