@@ -46,7 +46,7 @@ function Courses(){
                 <ListItem  index={2} background_bubble= {bubble_purple} courseName="COMS 4170" courseTitle="UI Design"></ListItem>
                 <ListItem  index={3} background_bubble= {bubble_green} courseName="APMA 3101" courseTitle="Applied Math I: Linear Algebrea"></ListItem>
                 <ListItem  index={4} background_bubble= {bubble_beige} courseName="STAT 2102" courseTitle="Applied Statistical Computing"></ListItem>
-                <ListItem  index={5} background_bubble= {bubble_blue} courseName="COMS 4111" courseTitle="Introduction to Databases"></ListItem>
+        
             </div>
             </div>
             <div className = "fish-container">

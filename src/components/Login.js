@@ -55,6 +55,9 @@ function Login () {
     const handleNewUserClick = () => {
         navigate('/signup')
     }
+    const handleLoginClick = () => {
+        navigate('/importcourses')
+    }
     return (
         <div className='background'>
             <div className='title'>bubble</div>
@@ -67,7 +70,7 @@ function Login () {
                     <label className="label" htmlFor="password">Password</label><br></br>
                     <input className="form-input" type="password" id="password" name="password" value={inputs.password} onChange={handleChange}></input>
                     <br></br>
-                    <input className="form-submit" type="submit" value="LOGIN"></input>
+                    <input className="form-submit" type="submit" value="LOGIN"  onClick={handleLoginClick}></input>
                 </form>
                 <button className="new-user" onClick={handleNewUserClick} >NEW USER</button>
             </div>

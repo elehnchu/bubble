@@ -11,7 +11,7 @@ function RetrieveCourses () {
     }
 
     const handleNextClick = () => {
-        navigate('/nobubblefound')
+        navigate('/aboutme')
     }
 
     return (
