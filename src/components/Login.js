@@ -56,7 +56,7 @@ function Login () {
         navigate('/signup')
     }
     const handleLoginClick = () => {
-        navigate('/importcourses')
+        navigate('/channellist')
     }
     return (
         <div className='background'>

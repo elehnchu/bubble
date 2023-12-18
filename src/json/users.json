@@ -28,11 +28,11 @@
     "password": "secure",
     "phoneNumber": "1234",
     "id": 2,
-    "major": "Applied Math",
-    "minor": "Music",
-    "bio": "I love math",
+    "major": "Math",
+    "minor": "Engineering",
+    "bio": "Looking forward to studying!",
     "tags": [
-      "group learner"
+      "night owl"
     ]
   },
   {

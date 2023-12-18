@@ -19,9 +19,7 @@ const MemberList = () => {
     setMembersInfo(matchedMembers);
   }, [memberIDs]);
 
-  const handleBackClick = () => {
-    navigate(-1);
-  };
+  const handleBackClick = () => navigate(-1);
 
   const handleMemberClick = (memberId) => {
     navigate('/userprofile', { state: { memberId } });

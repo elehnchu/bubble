@@ -57,8 +57,8 @@ const YourProfile = () => {
     <div className="your-profile">
       <img src={DefaultProfile} alt='' className="profile-photo" />
       <img src={PencilImage} alt="Pencil" className="pencil" onClick={handleEditClick}/>
-      <h1 className="user-text">{user ? user.name : "You"}</h1>
-      <p className="email-text">{user ? user.email : "abc123@email.com"}</p>
+      <h1 className="user-text">{user ? user.name : "Jane Doe"}</h1>
+      <p className="email-text">{user ? user.email : "test@email.com"}</p>
       <div className="detail-content">
         {user ? (user.tags.map((tag) => {
           return <div className="tag">{tag}</div>
@@ -68,11 +68,11 @@ const YourProfile = () => {
       <div className="details">
         <div className="detail-title">Major / Minor:</div>
         <div className="detail-content">
-          <div className="tag">{user ? user.major : ""}</div>
-          <div className="tag">{user ? user.minor : ""}</div>
+          <div className="tag">{user ? user.major : "Statistics"}</div>
+          <div className="tag">{user ? user.minor : "Economics"}</div>
         </div>
         <div className="detail-title">About Me:</div>
-        <p className="about-me-text">{user ? user.bio : ""}</p>
+        <p className="about-me-text">{user ? user.bio : "Undergrad student in CC!"}</p>
       </div>
     </div>
     <div className="Footer">
