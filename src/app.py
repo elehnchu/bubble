@@ -117,7 +117,7 @@ def update_user_info():
         if user:
             user.update(new_fields)
             save_data(users_file_path, users)
-            return jsonify({"message": "User information updated successfully"})
+            return jsonify(user)
         else:
             return jsonify({"message": "User not found"}), 404
     except Exception as e:

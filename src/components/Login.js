@@ -32,7 +32,7 @@ function Login () {
             const userData = await response.json();
 
             dispatch({type: 'SET_USER', payload: userData });
-            navigate('/yourprofile')
+            navigate('/channellist')
         } catch (error) {
             console.error('Error during login:', error);
         }
@@ -70,7 +70,7 @@ function Login () {
                     <label className="label" htmlFor="password">Password</label><br></br>
                     <input className="form-input" type="password" id="password" name="password" value={inputs.password} onChange={handleChange}></input>
                     <br></br>
-                    <input className="form-submit" type="submit" value="LOGIN"  onClick={handleLoginClick}></input>
+                    <input className="form-submit" type="submit" value="LOGIN"></input>
                 </form>
                 <button className="new-user" onClick={handleNewUserClick} >NEW USER</button>
             </div>

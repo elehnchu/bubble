@@ -7,7 +7,7 @@ import editImg from '../images/editImg.png'
 
 function AboutMe () {
     const navigate = useNavigate();
-    const { state } = useUser();
+    const { state, dispatch } = useUser();
     const { user } = state;
     const [inputs, setInputs] = useState({
         major: '',
@@ -52,6 +52,8 @@ function AboutMe () {
             if (!response.ok) {
                 throw new Error('Failed to update user information');
             }
+            const userData = await response.json();
+            dispatch({type: 'SET_USER', payload: userData });
 
             console.log('User information updated successfully');
         } catch (error) {

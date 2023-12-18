@@ -84,10 +84,63 @@
     "id": 7
   },
   {
-    "name": "Brian",
-    "email": "br@email.com",
-    "password": "passw",
-    "phoneNumber": "4321",
-    "id": 8
+    "name": "Jane Doe",
+    "email": "jane@email.com",
+    "password": "pass",
+    "phoneNumber": "202",
+    "id": 9,
+    "major": "Math",
+    "minor": "Music",
+    "bio": "I like math and music",
+    "tags": [
+      "math lover",
+      "night owl"
+    ]
+  },
+  {
+    "name": "",
+    "email": "",
+    "password": "",
+    "phoneNumber": "",
+    "id": 10,
+    "major": "Math",
+    "minor": "Music",
+    "bio": "math",
+    "tags": [
+      "math"
+    ]
+  },
+  {
+    "name": "Brian Smith",
+    "email": "bsmith@gmail.com",
+    "password": "password",
+    "phoneNumber": "212",
+    "id": 10
+  },
+  {
+    "name": "John Doe",
+    "email": "john@email.com",
+    "password": "password1",
+    "phoneNumber": "1234567890",
+    "id": 11,
+    "major": "Computer Science",
+    "minor": "Music",
+    "bio": "i'm john",
+    "tags": [
+      "math lover"
+    ]
+  },
+  {
+    "name": "Brian Smith",
+    "email": "bsmith@gmail.com",
+    "password": "password1",
+    "phoneNumber": "1234567890",
+    "id": 12,
+    "major": "Computer Science",
+    "minor": "Music",
+    "bio": "i'm brian",
+    "tags": [
+      "design lover"
+    ]
   }
 ]

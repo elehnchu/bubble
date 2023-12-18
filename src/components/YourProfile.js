@@ -12,7 +12,7 @@ import PencilImage from '../images/edit.png'
 import { useNavigate } from 'react-router-dom';
 
 const YourProfile = () => {
-  const { state, dispatch } = useUser();
+  const { state } = useUser();
   const { user } = state;
   const navigate = useNavigate();
 
@@ -60,10 +60,10 @@ const YourProfile = () => {
       <h1 className="user-text">{user ? user.name : "Jane Doe"}</h1>
       <p className="email-text">{user ? user.email : "test@email.com"}</p>
       <div className="detail-content">
-        {user ? (user.tags.map((tag) => {
+        {user ? ( user.tags ? (user.tags.map((tag) => {
           return <div className="tag">{tag}</div>
           }
-        )) : []}
+        )) : []) : []}
       </div>
       <div className="details">
         <div className="detail-title">Major / Minor:</div>
