@@ -54,7 +54,13 @@
     "email": "lara@gmail.com",
     "password": "pass",
     "phoneNumber": "1112223333",
-    "id": 4
+    "id": 4,
+    "major": "Computer Science",
+    "minor": "Statistics",
+    "bio": "HI!",
+    "tags": [
+      "design enthusiast"
+    ]
   },
   {
     "name": "Jane Doe",
@@ -138,9 +144,10 @@
     "id": 12,
     "major": "Computer Science",
     "minor": "Music",
-    "bio": "i'm brian",
+    "bio": "Hey",
     "tags": [
-      "design lover"
+      "Night-owl",
+      "Math-wiz"
     ]
   }
 ]

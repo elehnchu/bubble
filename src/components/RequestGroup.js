@@ -72,6 +72,10 @@ function RequestGroup ({groupPic, groupName, userData, tags, groupDescription}) 
     const handleProfileClick = () => {
       navigate('/yourprofile')
     }
+
+    const handleRequestClick = () => {
+        navigate('/nobubblefound')
+    }
     return (
         <div>
             <div className="Header">
@@ -97,7 +101,7 @@ function RequestGroup ({groupPic, groupName, userData, tags, groupDescription}) 
                     <div className="description-entry">{groupDescription}</div>
                 </div>
                 <div>
-                    <button className="request-button">REQUEST TO JOIN</button>
+                    <button className="request-button" onClick={handleRequestClick}>REQUEST TO JOIN</button>
                 </div>
             </div>
             <div className="Footer">

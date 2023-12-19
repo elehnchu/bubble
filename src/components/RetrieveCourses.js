@@ -11,7 +11,7 @@ function RetrieveCourses () {
     }
 
     const handleNextClick = () => {
-        navigate('/aboutme')
+        navigate('/yourprofile')
     }
 
     return (
